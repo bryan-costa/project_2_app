@@ -2,21 +2,21 @@ module.exports = (sequelize, Sequelize) => {
     class Occasion extends Sequelize.Model { }
     Occasion.init(
         {
-            occname: {
+            name: {
                 type: Sequelize.STRING,
                 max: 50,
                 notNull: true
             },
-            occtype: {
+            type: {
                 type: Sequelize.STRING,
                 isIn: ['Wedding', 'Birthday', `Valentine's Day`,'Other'],
                 notNull: true
             },
-            occdesc: {
+            description: {
                 type: Sequelize.STRING
             },
-            dateofocc: {
-                type: Sequelize.INTEGER,
+            date: {
+                type: Sequelize.DATEONLY,
                 notNull: true,
                 isDate: true
             }

@@ -2,8 +2,8 @@ const Sequelize = require('sequelize')
 const sequelize = require('../config')
 
 let User = require('./users.js')(sequelize, Sequelize)
-let Gift = require('./gifts.js')(sequelize, Sequelize)
 let Occasion = require('./occasions.js')(sequelize, Sequelize)
+let Gift = require('./gifts.js')(sequelize, Sequelize)
 let Purchase = require('./purchases.js')(sequelize, Sequelize)
 let Friend = require('./friends.js')(sequelize, Sequelize)
 
