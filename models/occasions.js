@@ -1,31 +1,31 @@
 module.exports = (sequelize, Sequelize) => {
-    class Gift extends Sequelize.Model { }
-    Gift.init(
+    class Occasion extends Sequelize.Model { }
+    Occasion.init(
         {
             name: {
                 type: Sequelize.STRING,
+                max: 50,
                 notNull: true
             },
             type: {
                 type: Sequelize.STRING,
-                isIn: ['gift', 'experience'],
+                isIn: ['Wedding', 'Birthday', `Valentine's Day`, 'Other'],
                 notNull: true
             },
-            price: {
-                type: Sequelize.DECIMAL,
-                isDecimal: true,
-                notNull: true
+            description: {
+                type: Sequelize.STRING
             },
-            url: {
-                type: Sequelize.STRING,
+            date: {
+                type: Sequelize.DATEONLY,
                 notNull: true,
+                isDate: true
             }
         },
         {
             sequelize,
-            modelName: 'gift'
+            modelName: 'occasion'
         }
     )
 
-    return Gift
+    return Occasion
 }
