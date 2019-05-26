@@ -9,13 +9,13 @@ module.exports = app => {
     })
     // Get one User
     app.get('/user/:id', (req, res) => {
-        User.findAll()
+        User.findOne(req.params.id)
             .then(user => res.json(user))
             .catch(e => console.log(e))
     })
     // Post a User
     app.post('/user', (req, res) => {
-        User.create()
+        User.create(req.body)
             .then(user => res.sendStatus(200))
             .catch(e => console.log(e))
     })

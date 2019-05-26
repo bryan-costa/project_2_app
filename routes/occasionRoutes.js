@@ -15,7 +15,7 @@ module.exports = app => {
     })
     // Post a Occasion
     app.post('/Occasion', (req, res) => {
-        Occasion.create()
+        Occasion.create(req.body)
             .then(occasion => res.sendStatus(200))
             .catch(e => console.log(e))
     })
