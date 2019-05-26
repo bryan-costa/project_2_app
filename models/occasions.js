@@ -9,7 +9,7 @@ module.exports = (sequelize, Sequelize) => {
             },
             type: {
                 type: Sequelize.STRING,
-                isIn: ['Wedding', 'Birthday', `Valentine's Day`,'Other'],
+                isIn: ['Wedding', 'Birthday', `Valentine's Day`, 'Other'],
                 notNull: true
             },
             description: {

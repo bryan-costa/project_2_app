@@ -2,9 +2,9 @@ module.exports = (sequelize, Sequelize) => {
     class User extends Sequelize.Model { }
     User.init(
         {
-            name:{
+            name: {
                 type: Sequelize.STRING,
-                notNull: true 
+                notNull: true
             },
             username: {
                 type: Sequelize.STRING,
@@ -14,7 +14,7 @@ module.exports = (sequelize, Sequelize) => {
             },
             password: {
                 type: Sequelize.STRING,
-                len: [8,20],
+                len: [8, 20],
                 notContains: 'password',
                 notNull: true
             },
