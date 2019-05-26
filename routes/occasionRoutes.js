@@ -4,7 +4,7 @@ module.exports = app => {
     // GET all Occasions
     app.get('./occasion', (req, res) => {
         Occasion.findAll()
-            .then (occasion => res.json (occasion))
+            .then (occasion => res.json(occasion))
             .catch (e => console.log(e))
 })
     // Get one Occasion
