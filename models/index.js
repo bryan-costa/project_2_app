@@ -15,6 +15,8 @@ Occasion.hasMany(Gift)
 Gift.belongsTo(Occasion)
 Gift.hasMany(Purchase)
 Purchase.belongsTo(Gift)
+Purchase.hasMany(Friend)
+Friend.belongsTo(Purchase)
 
 
 module.exports = {
