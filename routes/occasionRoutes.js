@@ -22,7 +22,7 @@ module.exports = app => {
 
     //PUT an occasion
     app.put('occasions/:id', (req, res) => {
-        User.update(req.body, { where: { id: req.params.id } })
+        Occasion.update(req.body, { where: { id: req.params.id } })
         .then(_ => res.sendStatus(200))
         .catch(e => console.log(e))
     })

@@ -11,13 +11,13 @@ module.exports = app => {
     // POST a Purchase
     app.post('/purchases', (req, res) => {
         Purchase.create(req.body)
-            .then(purchase => res.json(purchase))
+            .then(purchase => res.sendStatus(200))
             .catch(e => console.log(e))
     })
 
     //PUT a purchase
     app.put('purchases/:id', (req, res) => {
-        User.update(req.body, { where: { id: req.params.id } })
+        Purchase.update(req.body, { where: { id: req.params.id } })
         .then(_ => res.sendStatus(200))
         .catch(e => console.log(e))
     })
