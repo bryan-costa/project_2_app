@@ -2,21 +2,29 @@ const { Occasion } = require('../models')
 
 module.exports = app => {
     // GET all Occasions
-    app.get('./occasion', (req, res) => {
+    app.get('./occasions', (req, res) => {
         Occasion.findAll()
             .then (occasion => res.json(occasion))
             .catch (e => console.log(e))
 })
-    // Get one Occasion
-    app.get('/occasion/:id', (req, res) => {
-        Occasion.findAll()
+    // GET one Occasion
+    app.get('/occasions/:id', (req, res) => {
+        Occasion.findOne()
             .then(occasion => res.json(occasion))
             .catch(e => console.log(e))
     })
-    // Post a Occasion
-    app.post('/Occasion', (req, res) => {
+    // POST an Occasion
+    app.post('/occasions', (req, res) => {
         Occasion.create(req.body)
             .then(occasion => res.sendStatus(200))
             .catch(e => console.log(e))
     })
+
+    //PUT an occasion
+    app.put('occasions/:id', (req, res) => {
+        Occasion.update(req.body, { where: { id: req.params.id } })
+        .then(_ => res.sendStatus(200))
+        .catch(e => console.log(e))
+    })
+    
 }
