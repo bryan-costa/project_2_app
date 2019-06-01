@@ -1,5 +1,9 @@
 import React, { Component } from 'react'
-import occForm from '../../components/CreateOccasion'
+// import occForm from '../../components/CreateOccasion'
+import Type from '../../components/Form/Type'
+import Date from '../../components/Form/Date'
+import Description from '../../components/Form/Description'
+import Button from '../../components/Form/Button'
 
 class Occasion extends Component {
         state = {
@@ -35,17 +39,21 @@ class Occasion extends Component {
         render() {
                 return (
                         <>
-                                <h3>Hello</h3>
+                        <Type />
+                        <Date />
+                        <Description />
+                        <Button />
+                                {/* <h3>Hello </h3>
                                 {/* the form is not rendering on the page */}
-                                <occForm
+                                {/* <occForm
                                         handleInputChange={this.handleInputChange}
                                         handleFormSubmit={this.handleFormSubmit}
                                         name={this.state.name}
                                         type={this.state.type}
                                         description={this.state.description}
                                         date={this.state.date}
-                                        userid={this.state.userid}
-                                />
+                                        userid={this.state.userid} */}
+                                {/* /> */}
                         </>
 
                 )
