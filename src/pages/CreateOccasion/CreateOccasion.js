@@ -43,7 +43,7 @@ class Occasion extends Component {
                         <Date />
                         <Description />
                         <Button />
-                                {/* <h3>Hello</h3>
+                                {/* <h3>Hello </h3>
                                 {/* the form is not rendering on the page */}
                                 {/* <occForm
                                         handleInputChange={this.handleInputChange}
