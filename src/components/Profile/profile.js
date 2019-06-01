@@ -1,8 +1,8 @@
 import React from 'react'
 
-const profile = _ => 
+const Profile = _ => 
 <div>
 <h1>Profile Page</h1>
 </div>
 
-export default profile
+export default Profile

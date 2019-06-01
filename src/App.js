@@ -12,7 +12,7 @@ const App = _ =>
   <div>
     {/* <Route component={_ => <Login />} />
     <Route component={CreateEvent => <CreateEvent />} /> */}
-    <Route path="/home" component = {Login} />
+    <Route exact path="/" component = {Login} />
     <Route path="/CreateOccasion" component = {CreateOccasion} />
     <Route path="/AddToWishList" component = {AddToWishList} />
     <Route path="/Messages" component = {Messages} />
