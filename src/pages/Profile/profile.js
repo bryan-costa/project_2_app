@@ -1,9 +1,9 @@
 import React from 'react'
-import BottomNav from '../../components/bottomNav'
+import Profile from '../../components/Profile'
 
 const ProfilePage = _ =>
         <div>
-        <BottomNav />    
+        <Profile />
         </div>
 
     

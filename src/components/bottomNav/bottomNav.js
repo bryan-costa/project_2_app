@@ -6,6 +6,7 @@ import FaceIcon from '@material-ui/icons/Face';
 import CalendarIcon from '@material-ui/icons/DateRange';
 import WishIcon from '@material-ui/icons/CardGiftcard';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
+import { Link } from 'react-router-dom'
 
 
 const useStyles = makeStyles({
@@ -15,11 +16,11 @@ const useStyles = makeStyles({
 
   },
   icon: {
-      color: '#ffffff !important'
+    color: '#ffffff !important'
   },
-// handleChange: {
-//      color: '#000000 !important'
-//   } 
+  // handleChange: {
+  //      color: '#000000 !important'
+  //   } 
 });
 
 function LabelBottomNavigation() {
@@ -35,10 +36,14 @@ function LabelBottomNavigation() {
 
   return (
     <BottomNavigation value={value} onChange={handleChange} className={classes.root}>
-      <BottomNavigationAction className={classes.icon}  icon={<CalendarIcon />} />
-      <BottomNavigationAction className={classes.icon}  icon={<WishIcon />} />
-      <BottomNavigationAction className={classes.icon}  icon={<ChatBubbleIcon />} />
-      <BottomNavigationAction className={classes.icon}  icon={<FaceIcon />} />
+      <Link to='/CreateOccasion'>
+        <BottomNavigationAction className={classes.icon} icon={<CalendarIcon />} /></Link>
+      <Link to='/AddToWishList'>
+        <BottomNavigationAction className={classes.icon} icon={<WishIcon />} /></Link>
+      <Link to='/Messages'>
+        <BottomNavigationAction className={classes.icon} icon={<ChatBubbleIcon />} /></Link>
+      <Link to='/Profile'>
+        <BottomNavigationAction className={classes.icon} icon={<FaceIcon />} /></Link>
     </BottomNavigation>
   );
 }
