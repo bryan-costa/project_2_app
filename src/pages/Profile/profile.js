@@ -1,10 +1,10 @@
 import React from 'react'
-import Profile from '../../components/Profile'
+import BottomNav from '../../components/bottomNav'
 
 const ProfilePage = _ =>
         <div>
-        <Profile />    
+        <BottomNav />    
         </div>
 
     
-export default ProfilePage
+export default ProfilePage 

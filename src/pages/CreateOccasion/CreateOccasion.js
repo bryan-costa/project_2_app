@@ -1,10 +1,10 @@
 import React from 'react'
-import CreateEvent from '../../components/CreateEvent'
+import CreateOccForm from '../../components/createOccForm'
 
 const Event = _ =>
         <div>
-        <h1>Create Event Page</h1>    
-        <CreateEvent />
+        <h1>Create Create Page</h1>    
+        <CreateOccForm />
         </div>
 
     
