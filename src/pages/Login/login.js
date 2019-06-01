@@ -1,6 +1,6 @@
 import React from 'react'
 import UserInput from '../../components/UserInput'
-import LabelBottomNavigation from '../../components/bottomNav'
+
 
 const Login = _ =>
         <div>
