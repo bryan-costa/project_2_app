@@ -6,13 +6,16 @@ import AddToWishList from './pages/AddToWishList'
 import Messages from './pages/Messages'
 import Profile from './pages/Profile'
 import LabelBottomNavigation from './components/bottomNav'
+import NavBar from './components/NavBar'
+
+
 
 const App = _ =>
 <Router>
   <div>
     {/* <Route component={_ => <Login />} />
     <Route component={CreateEvent => <CreateEvent />} /> */}
-    <Route exact path="/" component = {Login} />
+    <Route path="/home" component = {Login} />
     <Route path="/CreateOccasion" component = {CreateOccasion} />
     <Route path="/AddToWishList" component = {AddToWishList} />
     <Route path="/Messages" component = {Messages} />
