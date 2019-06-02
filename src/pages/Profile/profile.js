@@ -1,9 +1,14 @@
 import React from 'react'
-import Profile from '../../components/Profile'
+// import TopNav from '../../components/TopNav'
+import ProfileTop from '../../components/ProfileTop'
+import BottomNav from '../../components/bottomNav'
+
 
 const ProfilePage = _ =>
         <div>
-        <Profile />
+        {/* <TopNav /> */}
+        <ProfileTop />
+        <BottomNav />      
         </div>
 
     

@@ -6,6 +6,7 @@ import AddToWishList from './pages/AddToWishList'
 import Messages from './pages/Messages'
 import Profile from './pages/Profile'
 import LabelBottomNavigation from './components/bottomNav'
+import TopNav from './components/TopNav'
 import OccBtn from './components/OccForm/Button/Button.js'
 
 
@@ -34,6 +35,7 @@ class App extends Component {
           {/* <Route component={_ => <Login />} />
     <Route component={CreateEvent => <CreateEvent />} /> */}
           <Route exact path="/" component={Login} />
+          <TopNav />
           <Route path="/CreateOccasion" component={() => <Occasion handleFormSubmit={this.handleFormSubmit} />} />
           <Route path="/AddToWishList" component={AddToWishList} />
           <Route path="/Messages" component={Messages} />

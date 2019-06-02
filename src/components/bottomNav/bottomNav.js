@@ -11,27 +11,27 @@ import { Link } from 'react-router-dom'
 
 const useStyles = makeStyles({
   root: {
-    width: 375,
+    // width: 375,
     backgroundColor: '#878993 !important',
-
+    width: '100%',
+    position: 'fixed',
+    bottom: 0,
   },
   icon: {
-    color: '#ffffff !important'
+      color: '#ffffff'
   },
-  // handleChange: {
-  //      color: '#000000 !important'
-  //   } 
+
+  select: {
+    fill: '#4ADDAF',
+    },
+
 });
 
 function LabelBottomNavigation() {
   const classes = useStyles({});
   const [value, setValue] = React.useState('recents');
-
-
-
   function handleChange(event, newValue) {
     setValue(newValue);
-
   }
 
   return (
@@ -45,6 +45,8 @@ function LabelBottomNavigation() {
       <Link to='/Profile'>
         <BottomNavigationAction className={classes.icon} icon={<FaceIcon />} /></Link>
     </BottomNavigation>
+
+
   );
 }
 
