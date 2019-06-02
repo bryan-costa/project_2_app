@@ -7,10 +7,6 @@ import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
 
 const useStyles = makeStyles(theme => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-  },
   formControl: {
     margin: theme.spacing(1),
     minWidth: 120,
@@ -41,22 +37,19 @@ function Type() {
   }
 
   return (
-    <form className={classes.root} autoComplete="off">
-      <FormControl variant="outlined" className={classes.formControl}>
+    <form className={classes.root} autoComplete="off" >
+      <FormControl variant="outlined" className={classes.formControl} style={{width: '90%', margin: '15px'}}>
         <InputLabel ref={inputLabel} htmlFor="outlined-age-simple">
-          Event
+          Event Type
         </InputLabel>
         <Select
           value={values.age}
           onChange={handleChange}
           input={<OutlinedInput labelWidth={labelWidth} name="age" id="outlined-age-simple" />}
         >
-          <MenuItem value="">
-            <em>None</em>
-          </MenuItem>
-          <MenuItem value={10}>Birthday</MenuItem>
-          <MenuItem value={20}>Wedding</MenuItem>
-          <MenuItem value={30}></MenuItem>
+          <MenuItem value={'birthday'}>Birthday</MenuItem>
+          <MenuItem value={'wedding'}>Wedding</MenuItem>
+          <MenuItem value={'baby'}>Baby</MenuItem>
         </Select>
       </FormControl>
     </form>

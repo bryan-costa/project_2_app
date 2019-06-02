@@ -4,7 +4,10 @@ import Button from '@material-ui/core/Button';
 
 const useStyles = makeStyles(theme => ({
   button: {
-    margin: theme.spacing(1),
+    margin: '15px',
+    width: '90%',
+    backgroundColor: '#4ADDAF',
+    textAlign: 'center',
   },
   input: {
     display: 'none',
@@ -16,7 +19,7 @@ function OccBtn() {
 
   return (
     <div>
-      <Button variant="contained" color="primary" className={classes.button}>
+      <Button variant="contained" color="primary" className={classes.button}  onClick = {()=>this.handleFormSubmit()}>
         Create Event
       </Button>
     </div>
