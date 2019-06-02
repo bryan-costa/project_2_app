@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './Name.css'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 // import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
@@ -28,7 +27,7 @@ class Description extends Component {
 
     render() {
         const { classes, item, onItemChange, FormControl, InputLabel, Select, handleChange, inputLabel, values, OutlinedInput, labelWidth } = this.props
-
+        console.log(this.name)
 
 
 
@@ -78,9 +77,9 @@ class Description extends Component {
                     className='textField'
                     id="name"
                     label="Event Name"
-                    style={{width: '90%', margin: '15px'}}
+                    style={{width: '90%', marginTop: '40px', marginLeft: '15px', marginRight: '15px', marginBottom: '30px'}}
                     // className={classes.textField}
-                    // value={values.name}
+                    value={this.name}
                     // onChange={handleChange('name')}
                     margin="normal"
                     variant="outlined"

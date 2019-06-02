@@ -73,15 +73,15 @@ class Description extends Component {
 
         {/* Textfield */}
         <TextField
-          id="outlined-multiline-flexible"
+          id="description"
           label="Description"
           multiline
           rowsMax="4"
-          // value={values.multiline}
+          value={this.description}
           // onChange={handleChange('multiline')}
           // className={classes.textField}
           // helperText=""
-          style={{width: '90%', margin: '15px'}}
+          style={{width: '90%', marginTop: '30px', marginBottom: '30px', marginLeft: '15px', marginRight: '15px'}}
           variant="outlined"
         />
         {/* End textfield */}

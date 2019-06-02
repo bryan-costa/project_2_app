@@ -19,8 +19,7 @@ const useStyles = makeStyles(theme => ({
 function Type() {
   const classes = useStyles();
   const [values, setValues] = React.useState({
-    age: '',
-    name: 'hai',
+    type: '',
   });
 
   const inputLabel = React.useRef(null);
@@ -43,9 +42,9 @@ function Type() {
           Event Type
         </InputLabel>
         <Select
-          value={values.age}
+          value={values.type}
           onChange={handleChange}
-          input={<OutlinedInput labelWidth={labelWidth} name="age" id="outlined-age-simple" />}
+          input={<OutlinedInput labelWidth={labelWidth} name="type" id="type" />}
         >
           <MenuItem value={'birthday'}>Birthday</MenuItem>
           <MenuItem value={'wedding'}>Wedding</MenuItem>
