@@ -21,8 +21,9 @@ function Date() {
     <form className={classes.container} noValidate>
       <TextField
         id="date"
-        label="Birthday"
+        label="Event Date"
         type="date"
+        style={{width: '90%', margin: '15px'}}
         defaultValue="2019-06-08"
         className={classes.textField}
         InputLabelProps={{

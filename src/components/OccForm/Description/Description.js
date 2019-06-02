@@ -9,33 +9,18 @@ import clsx from 'clsx';
 import MenuItem from '@material-ui/core/MenuItem';
 
 
-// const styles = {
-//   container: {
-//     display: 'flex',
-//     flexWrap: 'wrap',
-//   },
-//   textField: {
-//     marginLeft: theme.spacing(1),
-//     marginRight: theme.spacing(1),
-//   },
-//   dense: {
-//     marginTop: theme.spacing(2),
-//   },
-//   menu: {
-//     width: 200,
-//   },
-// root: {
-//   display: 'flex',
-//     flexWrap: 'wrap',
-//   },
-// formControl: {
-//   margin: theme.spacing(1),
-//     minWidth: 120,
-//   },
-// selectEmpty: {
-//   marginTop: theme.spacing(2),
-//   },
-// // };
+const useStyles = makeStyles(theme => ({
+  container: {
+    display: 'flex',
+    flexWrap: 'wrap',
+  },
+  textField: {
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
+    width: 600,
+  },
+}))
+
 
 
 class Description extends Component {
@@ -89,14 +74,14 @@ class Description extends Component {
         {/* Textfield */}
         <TextField
           id="outlined-multiline-flexible"
-          label="Multiline"
+          label="Description"
           multiline
           rowsMax="4"
           // value={values.multiline}
           // onChange={handleChange('multiline')}
           // className={classes.textField}
-          margin="normal"
-          helperText="please Enter an event"
+          // helperText=""
+          style={{width: '90%', margin: '15px'}}
           variant="outlined"
         />
         {/* End textfield */}

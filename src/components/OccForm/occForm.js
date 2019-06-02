@@ -114,7 +114,7 @@ class occForm extends Component {
                     </Grid>
                     {/* button to submit new event details */}
                     <Grid item xs={12}>
-                        <Button variant="contained" color="secondary" className={classes.button} onClick={handleFormSubmit}>
+                        <Button variant="contained" color='#4ADDAF' className={classes.button} onClick={handleFormSubmit}>
                             Create Event
                         </Button>
                     </Grid>
