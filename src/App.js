@@ -6,7 +6,7 @@ import AddToWishList from './pages/AddToWishList'
 import Messages from './pages/Messages'
 import Profile from './pages/Profile'
 import LabelBottomNavigation from './components/bottomNav'
-import OccBtn from './components/Form/Button/Button.js'
+import OccBtn from './components/OccForm/Button/Button.js'
 
 class App extends Component {
 
