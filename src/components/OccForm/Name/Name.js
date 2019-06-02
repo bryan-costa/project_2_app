@@ -79,7 +79,7 @@ class Description extends Component {
                     label="Event Name"
                     style={{width: '90%', marginTop: '40px', marginLeft: '15px', marginRight: '15px', marginBottom: '30px'}}
                     // className={classes.textField}
-                    // value={values.name}
+                    value={this.name}
                     // onChange={handleChange('name')}
                     margin="normal"
                     variant="outlined"

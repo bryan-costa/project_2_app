@@ -77,7 +77,7 @@ class Description extends Component {
           label="Description"
           multiline
           rowsMax="4"
-          value={this.date}
+          value={this.description}
           // onChange={handleChange('multiline')}
           // className={classes.textField}
           // helperText=""
