@@ -27,7 +27,7 @@ class Description extends Component {
 
     render() {
         const { classes, item, onItemChange, FormControl, InputLabel, Select, handleChange, inputLabel, values, OutlinedInput, labelWidth } = this.props
-
+        console.log(this.name)
 
 
 
