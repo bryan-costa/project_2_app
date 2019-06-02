@@ -24,7 +24,7 @@ function Date() {
         id="date"
         label="Event Date"
         type="date"
-        style={{width: '90%', margin: '15px', color: '#4ADDAF'}}
+        style={{width: '90%', marginTop: '30px', marginLeft: '15px', marginRight: '15px', marginBottom: '20px'}}
         defaultValue="2019-06-08"
         className={classes.textField}
         InputLabelProps={{

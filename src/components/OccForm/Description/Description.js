@@ -81,7 +81,7 @@ class Description extends Component {
           // onChange={handleChange('multiline')}
           // className={classes.textField}
           // helperText=""
-          style={{width: '90%', margin: '15px'}}
+          style={{width: '90%', marginTop: '30px', marginBottom: '30px', marginLeft: '15px', marginRight: '15px'}}
           variant="outlined"
         />
         {/* End textfield */}
