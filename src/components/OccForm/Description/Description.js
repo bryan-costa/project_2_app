@@ -73,7 +73,7 @@ class Description extends Component {
 
         {/* Textfield */}
         <TextField
-          id="outlined-multiline-flexible"
+          id="description"
           label="Description"
           multiline
           rowsMax="4"

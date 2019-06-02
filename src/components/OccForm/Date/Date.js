@@ -1,4 +1,5 @@
-import React from 'react';
+import React from 'react'
+// import { DatePicker, KeyboardDatePicker } from "@material-ui/pickers"
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
 
@@ -23,7 +24,7 @@ function Date() {
         id="date"
         label="Event Date"
         type="date"
-        style={{width: '90%', margin: '15px'}}
+        style={{width: '90%', margin: '15px', color: '#4ADDAF'}}
         defaultValue="2019-06-08"
         className={classes.textField}
         InputLabelProps={{
@@ -33,5 +34,22 @@ function Date() {
     </form>
   );
 }
+
+// function Date (props) {
+//   const [selectedDate, handleDateChange] = useState(new Date());
+
+//   return (
+//       <KeyboardDatePicker
+//         autoOk
+//         variant="inline"
+//         inputVariant="outlined"
+//         label="Event Date"
+//         format="MM/dd/yyyy"
+//         value={'date'}
+//         InputAdornmentProps={{ position: "start" }}
+//         onChange={date => handleDateChange(date)}
+//       />
+//   );
+// }
 
 export default Date
