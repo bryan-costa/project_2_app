@@ -1,12 +1,12 @@
 import React from 'react'
 import UserInput from '../../components/UserInput'
-
+import './index.css'
 
 const Login = _ =>
         <div>
-        <h1>Login Page</h1>    
-        <UserInput />
+                <img className='image' src="/images/logo.png" alt='logo' />
+                <UserInput />
         </div>
 
-    
+
 export default Login
