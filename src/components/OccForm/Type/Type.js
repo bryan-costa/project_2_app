@@ -42,7 +42,7 @@ function Type() {
           Event Type
         </InputLabel>
         <Select
-          // value={this.date}
+          value={values.type}
           onChange={handleChange}
           input={<OutlinedInput labelWidth={labelWidth} name="type" id="type" />}
         >
