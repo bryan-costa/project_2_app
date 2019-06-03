@@ -44,6 +44,9 @@ class CreateOccasion extends Component {
                 const { handleFormSubmit } = this.state
                 return (
                         <>
+                        <div>
+                        <img className='image' src="/images/logo.png" alt='logo'/>
+                        </div>
                                 <Name 
                                         handleChange={this.handleChange}
                                 />
