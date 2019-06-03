@@ -17,8 +17,8 @@ class App extends Component {
         <div>
           {/* <Route component={_ => <Login />} />
     <Route component={CreateEvent => <CreateEvent />} /> */}
-          <Route exact path="/" component={Login} />
           <TopNav />
+          <Route exact path="/" component={Login} />
           <Route path="/CreateOccasion" component={CreateOccasion} />
           <Route path="/AddToWishList" component={AddToWishList} />
           <Route path="/Messages" component={Messages} />
