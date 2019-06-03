@@ -26,7 +26,7 @@ const useStyles = makeStyles(theme => ({
 class Description extends Component {
 
   render() {
-    const { classes, item, onItemChange, FormControl, InputLabel, Select, handleChange, inputLabel, values, OutlinedInput, labelWidth } = this.props
+    const { classes, description, item, FormControl, InputLabel, Select, handleChange, inputLabel, values, OutlinedInput, labelWidth } = this.props
 
 
 
@@ -77,7 +77,8 @@ class Description extends Component {
           label="Description"
           multiline
           rowsMax="4"
-          value={this.description}
+          value={description}
+          onChange={handleChange}
           // onChange={handleChange('multiline')}
           // className={classes.textField}
           // helperText=""
