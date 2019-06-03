@@ -1,5 +1,5 @@
 const amazon = require('amazon-product-api');
-Create client
+// Create client;
 
 let client = amazon.createClient({
   awsId: '#',
