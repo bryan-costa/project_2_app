@@ -26,48 +26,12 @@ const useStyles = makeStyles(theme => ({
 class Description extends Component {
 
     render() {
-        const { classes, item, onItemChange, FormControl, InputLabel, Select, handleChange, inputLabel, values, OutlinedInput, labelWidth } = this.props
-        console.log(this.name)
-
-
-
-
-        // Code for textfield -----------------------------------------
-        // function OutlinedTextFields() {
-        //   const classes = useStyles();
-        //   const [values, setValues] = React.useState({
-        //     name: 'Cat in the Hat',
-        //     age: '',
-        //     multiline: 'Controlled',
-        //     currency: 'EUR',
-        //   });
+        const { classes, name, item, onItemChange, FormControl, InputLabel, Select, handleChange, inputLabel, values, OutlinedInput, labelWidth } = this.props
 
         // const handleChange = name => event => {
         //   setValues({ ...values, [name]: event.target.value });
-        // };
-        // Code for textfield  END -----------------------------------------
-
-        // Code for age input-------------------------------------------
-        // function SimpleSelect() {
-        //   const classes = useStyles();
-        //   const [values, setValues] = React.useState({
-        //     age: '',
-        //     name: 'hai',
-        //   });
-
-        // const inputLabel = React.useRef(null);
-        // const [labelWidth, setLabelWidth] = React.useState(0);
-        // React.useEffect(() => {
-        //   setLabelWidth(inputLabel.current.offsetWidth);
-        // }, []);
-
-        // function handleChange(event) {
-        //   setValues(oldValues => ({
-        //     ...oldValues,
-        //     [event.target.name]: event.target.value,
-        //   }));
         // }
-
+        
         return (
             <>
 
@@ -79,8 +43,8 @@ class Description extends Component {
                     label="Event Name"
                     style={{width: '90%', marginTop: '40px', marginLeft: '15px', marginRight: '15px', marginBottom: '30px'}}
                     // className={classes.textField}
-                    value={this.name}
-                    // onChange={handleChange('name')}
+                    value={name}
+                    onChange={handleChange}
                     margin="normal"
                     variant="outlined"
                 />
