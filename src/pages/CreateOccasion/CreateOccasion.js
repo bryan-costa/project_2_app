@@ -47,7 +47,7 @@ class CreateOccasion extends Component {
                                 <Name 
                                         handleChange={this.handleChange}
                                 />
-                                <Type
+                                <Type 
                                         handleChange={this.handleChange}
                                 />
                                 <Date
