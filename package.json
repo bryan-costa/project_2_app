@@ -2,7 +2,6 @@
   "name": "wishbone",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://locahost:3001",
   "dependencies": {
     "concurrently": "^4.1.0",
     "dotenv": "^8.0.0",
