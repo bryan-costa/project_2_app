@@ -1,4 +1,4 @@
-import axios from '../../../node_modules/axios'
+import axios from 'axios'
 
 const Occasion = {
     postOne: newOcc => axios.post('/occasions', newOcc)
