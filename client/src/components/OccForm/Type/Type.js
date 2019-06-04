@@ -17,7 +17,6 @@ const useStyles = makeStyles(theme => ({
 }));
 
 function Type({ handleChange, type }) {
-  console.log('here is the type: ', type)
   const classes = useStyles();
 
   const inputLabel = React.useRef(null);
