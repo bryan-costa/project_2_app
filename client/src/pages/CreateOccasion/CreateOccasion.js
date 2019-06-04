@@ -16,8 +16,7 @@ class CreateOccasion extends Component {
                 // need to get exact id for login button
                 // do i have to define this as a variable above?
                 // userid: localStorage.getItem('userLogin'),
-                userid: '',
-                occList: []
+                userId: '',
         }
 
         clearForm = _ => {
@@ -37,12 +36,11 @@ class CreateOccasion extends Component {
                         type: this.state.type,
                         description: this.state.description,
                         date: this.state.date,
-                        userId: 1
+                        userId: this.state.userId
                 }
                 Occasion.postOne(newOcc)
                 this.state.occList.push(newOcc)
                 this.setState({ newOcc })
-                this.state.occList.push(newOcc)
                 console.log(newOcc)
                 console.log(occList)
         }

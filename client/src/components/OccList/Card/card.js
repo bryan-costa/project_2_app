@@ -1,4 +1,5 @@
 import React from 'react';
+import './assets/css/card.css'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -33,23 +34,23 @@ function OccCard({name}) {
       <CardActionArea>
         <CardMedia
           className={classes.media}
-          image="./assets/images/balloons.png"
+          id='cardImage'
           title="Birthday Balloons"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {name}
+          <Typography gutterBottom variant="h6" component="h4">
+            Marianna's Birthday Party
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            {Description}
+            Here is an approved list of gifts that you may buy for me on the occasion of my birthday. Please do not veer!
           </Typography>
         </CardContent>
       </CardActionArea>
-      <CardActions style={{marginLeft: '5%', marginRight: '5%'}}>
-        <Button id='update' size="small" color="primary">
+      <CardActions style={{marginLeft: '8%', marginRight: '5%'}}>
+        <Button id='update' size="small" backgroundGolor="#4ADDAF">
           Update
         </Button>
-        <Button id='wishList' size="small" color="primary">
+        <Button id='wishList' size="small" color="#4ADDAF">
           Wish List
         </Button>
         <Button id='delete' size="small" color="primary">

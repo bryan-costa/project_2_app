@@ -1,0 +1,10 @@
+#cardImage {
+    background-image: url(../images/balloons.png)
+}
+
+#update, #wishList, #delete {
+    background-color: #4ADDAF;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}

@@ -8,21 +8,41 @@ import OccCard from '../../components/OccList/Card'
 import Occasion from '../../components/Utils/occasion.js'
 
 class OccasionList extends Component {
+    state = {
+        name: '',
+        type: '',
+        date: '',
+        description: '',
+        // need to get exact id for login button
+        // do i have to define this as a variable above?
+        // userid: localStorage.getItem('userLogin'),
+        userId: '',
+    }
 
-        handleGetOccasions = event => {
-                console.log("Here I am!")
-                // Occasion.postOne(newOcc)
-        }
+    componentWillMount () {
+        Occasion.getAll()
+        .then(({data}) => {
+            this.setState({occList: data})
+        })
+    }
 
-        render() {
-                return (
-                        <>
-                                <OccListBtn // handleGetOccasions={this.handleGetOccasions} 
-                                />
-                                <OccCard />
-                        </>
-                )
-        }
+
+    handleGetOccasions = event => {
+        const userId = this.state.userId
+        console.log("Here I am!")
+        Occasion.getAll()
+    }
+
+    render() {
+        return (
+            <>
+                <OccListBtn // handleGetOccasions={this.handleGetOccasions} 
+                />
+                <h1 style={{ textAlign: 'center', color: '#707070' }}>Upcoming Events</h1>
+                <OccCard />
+            </>
+        )
+    }
 }
 
 export default OccasionList

@@ -1,13 +1,13 @@
 const { Occasion } = require('../models')
 
 module.exports = app => {
-    // GET all Occasions
+    // GET all Occasions for a particular userID
     // this is working!
-    app.get('/occasions', (req, res) => {
-        Occasion.findAll()
-            .then (occasion => res.json(occasion))
-            .catch (e => console.log(e))
-})
+    // app.get('/occasions', (req, res) => {
+    //     Occasion.findAll({ where: { userId: req.params.userId } })
+    //         .then(occasion => res.json(occasion))
+    //         .catch(e => console.log(e))
+    // })
     // GET one Occasion
     // this is working!
     app.get('/occasions/:id', (req, res) => {
@@ -28,15 +28,22 @@ module.exports = app => {
     app.put('/occasions/:id', (req, res) => {
         console.log(req.body)
         Occasion.update(req.body, { where: { id: req.params.id } })
-        .then(_ => res.sendStatus(200))
-        .catch(e => console.log(e))
+            .then(_ => res.sendStatus(200))
+            .catch(e => console.log(e))
     })
-    
-     //DELETE an occasion
+
+    //DELETE an occasion
     // this is working!
     app.delete('/occasions/:id', (req, res) => {
-        Occasion.destroy( { where: { id: req.params.id } })
-        .then(user => res.sendStatus(200))
-        .catch(e => console.log(e))
+        Occasion.destroy({ where: { id: req.params.id } })
+            .then(user => res.sendStatus(200))
+            .catch(e => console.log(e))
+    })
+
+    // GET all occasions
+    app.get('/occasions', (req, res) => {
+        Occasion.findAll()
+            .then(user => res.json(user))
+            .catch(e => console.log(e))
     })
 }
