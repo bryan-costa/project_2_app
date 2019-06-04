@@ -4,6 +4,7 @@ import Type from '../../components/OccForm/Type'
 import Date from '../../components/OccForm/Date'
 import Description from '../../components/OccForm/Description'
 import OccListBtn from '../../components/OccList/Button'
+import OccCard from '../../components/OccList/Card'
 import Occasion from '../../components/Utils/occasion.js'
 
 class OccasionList extends Component {
@@ -16,9 +17,9 @@ class OccasionList extends Component {
         render() {
                 return (
                         <>
-                                <OccListBtn
-                                        // handleGetOccasions={this.handleGetOccasions}
+                                <OccListBtn // handleGetOccasions={this.handleGetOccasions} 
                                 />
+                                <OccCard />
                         </>
                 )
         }
