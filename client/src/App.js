@@ -7,6 +7,7 @@ import Messages from './pages/Messages'
 import Profile from './pages/Profile'
 import LabelBottomNavigation from './components/bottomNav'
 import TopNav from './components/TopNav'
+import ViewFriends from './pages/ViewFriends'
 
 
 
@@ -23,6 +24,7 @@ class App extends Component {
           <Route path="/AddToWishList" component={AddToWishList} />
           <Route path="/Messages" component={Messages} />
           <Route path="/Profile" component={Profile} />
+          <Route path="/ViewFriends" component={ViewFriends} />
           <LabelBottomNavigation />
         </div>
       </Router>
