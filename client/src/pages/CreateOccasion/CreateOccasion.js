@@ -37,7 +37,7 @@ class CreateOccasion extends Component {
                         type: this.state.type,
                         description: this.state.description,
                         date: this.state.date,
-                        userid: '1'
+                        userId: 1
                 }
                 Occasion.postOne(newOcc)
                 this.state.occList.push(newOcc)
