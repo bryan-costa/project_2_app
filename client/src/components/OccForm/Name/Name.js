@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './Name.css'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
 // import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'

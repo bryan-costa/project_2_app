@@ -16,24 +16,14 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Type() {
+function Type({ handleChange, type }) {
   const classes = useStyles();
-  const [values, setValues] = React.useState({
-    type: '',
-  });
 
   const inputLabel = React.useRef(null);
   const [labelWidth, setLabelWidth] = React.useState(0);
   React.useEffect(() => {
     setLabelWidth(inputLabel.current.offsetWidth);
   }, []);
-
-  function handleChange(event) {
-    setValues(oldValues => ({
-      ...oldValues,
-      [event.target.name]: event.target.value,
-    }));
-  }
 
   return (
     <form className={classes.root} autoComplete="off" >
@@ -42,13 +32,15 @@ function Type() {
           Event Type
         </InputLabel>
         <Select
-          value={values.type}
+          value={type}
           onChange={handleChange}
           input={<OutlinedInput labelWidth={labelWidth} name="type" id="type" />}
         >
-          <MenuItem value={'birthday'}>Birthday</MenuItem>
-          <MenuItem value={'wedding'}>Wedding</MenuItem>
-          <MenuItem value={'baby'}>Baby</MenuItem>
+          <MenuItem value='birthday'>Birthday</MenuItem>
+          <MenuItem value='wedding'>Wedding</MenuItem>
+          <MenuItem value='baby'>Baby</MenuItem>
+          <MenuItem value='valentines'>Valentine's Day</MenuItem>
+          <MenuItem value='because'>Just Because</MenuItem>
         </Select>
       </FormControl>
     </form>
