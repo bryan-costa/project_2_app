@@ -21,24 +21,16 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function OccBtn({handleFormSubmit, handleChange, clearForm}) {
+function OccListBtn({handleGetOccasions}) {
   const classes = useStyles()
-
-  // const submit = _ => {
-  //   console.log('Here I am!')
-  // }
 
   return (
     <div>
-      <Button id='occBtn' variant="contained" color="primary" Selected ClassName="selBtn" className={classes.button} href='/OccasionList' onClick={() => {
-        handleFormSubmit()
-        // clearForm()
-        // handleChange()
-        }}>
-        Create Event
+      <Button id='occListBtn' variant="contained" color="primary" className={classes.button} href='/CreateOccasion'> 
+        Create New Event
       </Button>
     </div>
   );
 }
 
-export default OccBtn
+export default OccListBtn
