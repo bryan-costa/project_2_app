@@ -3,6 +3,7 @@
 }
 
 #update, #wishList, #delete {
+    height: 26px;
     background-color: #4ADDAF;
     color: white;
     font-weight: bold;

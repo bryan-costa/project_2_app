@@ -22,7 +22,7 @@ const useStyles = makeStyles({
 
   },
   media: {
-    height: 100,
+    height: 80,
   },
 });
 
@@ -37,12 +37,12 @@ function OccCard({name}) {
           id='cardImage'
           title="Birthday Balloons"
         />
-        <CardContent>
+        <CardContent id='content' style={{padding: '10px'}}>
           <Typography gutterBottom variant="h6" component="h4">
-            Marianna's Birthday Party
+            Marianna's Party
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            Here is an approved list of gifts that you may buy for me on the occasion of my birthday. Please do not veer!
+            This is a long description so I can see what the spacing looks like.
           </Typography>
         </CardContent>
       </CardActionArea>
