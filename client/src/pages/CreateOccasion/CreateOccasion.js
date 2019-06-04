@@ -35,21 +35,26 @@ class CreateOccasion extends Component {
         //         // need to include navigation to the wish list page
         }
 
+        handleChange = event => {
+                this.setState({ [event.target.id]: event.target.value })
+        }
+
 
         render() {
                 const { handleFormSubmit } = this.state
                 return (
                         <>
                                 <Name 
+                                        handleChange={this.handleChange}
                                 />
                                 <Type 
-                                       
+                                        handleChange={this.handleChange}
                                 />
-                                <Date 
-                                        
+                                <Date
+                                        handleChange={this.handleChange}
                                 />
-                                <Description 
-                                       
+                                <Description
+                                        handleChange={this.handleChange}
                                 />
                                 <OccBtn 
                                         name={this.state.name}
