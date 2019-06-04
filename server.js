@@ -11,7 +11,7 @@ require('./routes')(app)
 
 // {force: true}
 require('./config').sync()
-    .then(_ => app.listen(process.env.PORT || 3001))
+    .then(_ => app.listen(process.env.PORT || 3000))
     .catch(e => console.log(e))
 
 // "proxy": "http://localhost:3001",
