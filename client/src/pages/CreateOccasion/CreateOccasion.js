@@ -44,7 +44,15 @@ class CreateOccasion extends Component {
         }
 
         handleChange = event => {
-                this.setState({ [event.target.id]: event.target.value })
+                console.log('here is something:::::: ', event)
+                if (event.target.name) {
+                    return this.setState({
+                        [event.target.name]: event.target.value
+                    })    
+                }
+                this.setState({
+                        [event.target.id]: event.target.value
+                })
         }
 
 
@@ -59,6 +67,7 @@ class CreateOccasion extends Component {
                                         handleChange={this.handleChange}
                                 />
                                 <Type
+                                        type={this.state.type}
                                         handleChange={this.handleChange}
                                 />
                                 <Date
