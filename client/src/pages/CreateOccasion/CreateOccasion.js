@@ -19,6 +19,15 @@ class CreateOccasion extends Component {
                 occList: []
         }
 
+        clearForm = _ => {
+                this.setState({
+                        name: '',
+                        type: '',
+                        date: '',
+                        description: '',  
+                })
+        }
+
         handleFormSubmit = event => {
                 console.log("Here I am!")
                 let newOcc = {
@@ -32,7 +41,6 @@ class CreateOccasion extends Component {
                 this.state.occList.push(newOcc)
                 this.setState({ newOcc })
                 console.log(newOcc)
-        //         // need to include navigation to the wish list page
         }
 
         handleChange = event => {
@@ -44,13 +52,13 @@ class CreateOccasion extends Component {
                 const { handleFormSubmit } = this.state
                 return (
                         <>
-                        <div>
-                        <img className='image' src="/images/logo.png" alt='logo'/>
-                        </div>
-                                <Name 
+                                <div>
+                                        <img className='image' src="/images/logo.png" alt='logo' />
+                                </div>
+                                <Name
                                         handleChange={this.handleChange}
                                 />
-                                <Type 
+                                <Type
                                         handleChange={this.handleChange}
                                 />
                                 <Date
@@ -59,12 +67,14 @@ class CreateOccasion extends Component {
                                 <Description
                                         handleChange={this.handleChange}
                                 />
-                                <OccBtn 
+                                <OccBtn
                                         name={this.state.name}
                                         type={this.state.type}
                                         date={this.state.date}
                                         description={this.state.description}
                                         handleFormSubmit={this.handleFormSubmit}
+                                        // clearForm={this.clearForm}
+                                        // handleChange={this.handleChange}
                                 />
                         </>
                 )

@@ -49,6 +49,8 @@ function Type() {
           <MenuItem value={'birthday'}>Birthday</MenuItem>
           <MenuItem value={'wedding'}>Wedding</MenuItem>
           <MenuItem value={'baby'}>Baby</MenuItem>
+          <MenuItem value={'valentines'}>Valentine's Day</MenuItem>
+          <MenuItem value={'because'}>Just Because</MenuItem>
         </Select>
       </FormControl>
     </form>
