@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Login from './pages/Login'
 import CreateOccasion from './pages/CreateOccasion'
-import AddToWishList from './pages/AddToWishList'
+import EventList from './pages/EventList'
 import Messages from './pages/Messages'
 import Profile from './pages/Profile'
 import LabelBottomNavigation from './components/bottomNav'
@@ -21,7 +21,7 @@ class App extends Component {
           <TopNav />
           <Route exact path="/" component={Login} />
           <Route path="/CreateOccasion" component={CreateOccasion} />
-          <Route path="/AddToWishList" component={AddToWishList} />
+          <Route path="/EventList" component={EventList} />
           <Route path="/Messages" component={Messages} />
           <Route path="/Profile" component={Profile} />
           <Route path="/ViewFriends" component={ViewFriends} />
