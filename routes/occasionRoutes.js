@@ -2,6 +2,7 @@ const { Occasion } = require('../models')
 
 module.exports = app => {
     // GET all Occasions for a particular userID
+    // this is working!
     app.get('/occasions/:userId', (req, res) => {
         Occasion.findAll({ where: { userId: req.params.userId } })
             .then(occasion => res.json(occasion))
@@ -40,6 +41,7 @@ module.exports = app => {
     })
 
     // GET all occasions
+    // this is working > but not used in this app
     app.get('/occasions', (req, res) => {
         Occasion.findAll()
             .then(user => res.json(user))
