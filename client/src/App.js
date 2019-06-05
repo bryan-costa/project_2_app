@@ -22,11 +22,11 @@ class App extends Component {
           <TopNav />
           <Route exact path="/" component={Login} />
           <Route exact path="/OccasionList" component={OccasionList} />
-          <Route path="/CreateOccasion" component={CreateOccasion} />
-          <Route path="/AddToWishList" component={AddToWishList} />
-          <Route path="/Messages" component={Messages} />
-          <Route path="/Profile" component={Profile} />
-          <Route path="/ViewFriends" component={ViewFriends} />
+          <Route exact path="/CreateOccasion" component={CreateOccasion} />
+          <Route exact path="/AddToWishList" component={AddToWishList} />
+          <Route exact path="/Messages" component={Messages} />
+          <Route exact path="/Profile" component={Profile} />
+          <Route exact path="/ViewFriends" component={ViewFriends} />
           <LabelBottomNavigation />
         </div>
       </Router>
