@@ -30,7 +30,7 @@ function OccBtn({handleFormSubmit, handleChange, clearForm}) {
 
   return (
     <div>
-      <Button id='occBtn' variant="contained" color="primary" Selected ClassName="selBtn" className={classes.button} onClick={() => {
+      <Button id='occBtn' href='/OccasionList' variant="contained" color="primary" Selected ClassName="selBtn" className={classes.button} onClick={() => {
         handleFormSubmit()
         // clearForm()
         // handleChange()
@@ -43,4 +43,3 @@ function OccBtn({handleFormSubmit, handleChange, clearForm}) {
 
 export default OccBtn
 
-// href='/OccasionList' 

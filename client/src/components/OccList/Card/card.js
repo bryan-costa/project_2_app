@@ -17,7 +17,7 @@ const useStyles = makeStyles({
     marginLeft: '10%',
     marginRight: '10%',
     marginTop: '15px',
-    marginBottom: '15px',
+    marginBottom: '30px',
     maxWidth: 300,
 
   },

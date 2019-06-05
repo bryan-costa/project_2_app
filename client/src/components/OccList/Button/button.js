@@ -26,7 +26,7 @@ function OccListBtn({handleGetOccasions}) {
 
   return (
     <div>
-      <Button id='occListBtn' variant="contained" color="primary" className={classes.button} href='/CreateOccasion'> 
+      <Button id='occListBtn' href='/CreateOccasion' variant="contained" color="primary" className={classes.button} href='/CreateOccasion'> 
         Create New Event
       </Button>
     </div>
