@@ -17,6 +17,7 @@ class OccasionList extends Component {
         // do i have to define this as a variable above?
         // userid: localStorage.getItem('userLogin'),
         userId: '',
+        occList: []
     }
 
     componentWillMount () {
@@ -39,7 +40,9 @@ class OccasionList extends Component {
                 <OccListBtn // handleGetOccasions={this.handleGetOccasions} 
                 />
                 <h1 style={{ textAlign: 'center', color: '#707070' }}>Upcoming Events</h1>
-                <OccCard />
+                <OccCard 
+                    newOcc={this.state.occList}
+                />
             </>
         )
     }

@@ -26,10 +26,11 @@ const useStyles = makeStyles({
   },
 });
 
-function OccCard({name}) {
+function OccCard({newOcc}) {
   const classes = useStyles();
 
   return (
+    newOcc.map(({ userId, name, description }) => (
     <Card className={classes.card}>
       <CardActionArea>
         <CardMedia
@@ -38,11 +39,11 @@ function OccCard({name}) {
           title="Birthday Balloons"
         />
         <CardContent id='content' style={{padding: '10px'}}>
-          <Typography gutterBottom variant="h6" component="h4">
-            Marianna's Party
+          <Typography id='name' gutterBottom variant="h6" component="h4">
+            {name}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
-            This is a long description so I can see what the spacing looks like.
+          <Typography id='description' variant="body2" color="textSecondary" component="p">
+            {description}
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -58,8 +59,8 @@ function OccCard({name}) {
         </Button>
       </CardActions>
     </Card>
-  );
-}
+  ))
+  )}
 
 
 

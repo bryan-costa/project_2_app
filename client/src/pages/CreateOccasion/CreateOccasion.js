@@ -17,6 +17,7 @@ class CreateOccasion extends Component {
                 // do i have to define this as a variable above?
                 // userid: localStorage.getItem('userLogin'),
                 userId: '',
+                occList: []
         }
 
         clearForm = _ => {
@@ -36,11 +37,11 @@ class CreateOccasion extends Component {
                         type: this.state.type,
                         description: this.state.description,
                         date: this.state.date,
-                        userId: this.state.userId
+                        userId: 7
                 }
                 Occasion.postOne(newOcc)
                 this.state.occList.push(newOcc)
-                this.setState({ newOcc })
+                this.setState({ ...newOcc })
                 console.log(newOcc)
                 console.log(occList)
         }
