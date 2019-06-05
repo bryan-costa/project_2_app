@@ -1,5 +1,6 @@
+import React from 'react'
+import EventList from '../../components/EventList'
 //Home Component 
-import React, {Component} from 'react'
 import axios from 'axios'
 //import SearchResults & SearchForm Component 
 
@@ -114,6 +115,8 @@ then in the render method of the SearchResults component:
 render(){
     return(
         <div>
+        <h1>Add To Wish List Page</h1>    
+        <EventList />
         {this.createCards()}
         </div>
     )
