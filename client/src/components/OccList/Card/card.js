@@ -26,41 +26,46 @@ const useStyles = makeStyles({
   },
 });
 
-function OccCard({newOcc}) {
+function OccCard({ newOcc }) {
   const classes = useStyles();
 
   return (
-    newOcc.map(({ userId, name, description }) => (
-    <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          id='cardImage'
-          title="Birthday Balloons"
-        />
-        <CardContent id='content' style={{padding: '10px'}}>
-          <Typography id='name' gutterBottom variant="h6" component="h4">
-            {name}
-          </Typography>
-          <Typography id='description' variant="body2" color="textSecondary" component="p">
-            {description}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions style={{marginLeft: '8%', marginRight: '5%'}}>
-        <Button id='update' size="small" backgroundGolor="#4ADDAF">
-          Update
+    newOcc.map(({ userId, id, name, description, handleDeleteOccasion }) => (
+      <Card className={classes.card}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            id='cardImage'
+            title="Birthday Balloons"
+          />
+          <CardContent id='content' style={{ padding: '10px' }}>
+            <Typography id='name' gutterBottom variant="h6" component="h4">
+              {name}
+            </Typography>
+            <Typography id='description' variant="body2" color="textSecondary" component="p">
+              {description}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+        <CardActions style={{ marginLeft: '8%', marginRight: '5%' }}>
+          <Button id='update' size="small" backgroundGolor="#4ADDAF">
+            Update
         </Button>
-        <Button id='wishList' size="small" color="#4ADDAF">
-          Wish List
+          <Button id='wishList' size="small" color="#4ADDAF">
+            Wish List
         </Button>
-        <Button id='delete' size="small" color="primary">
-          Delete
+          <Button id='delete' size="small" color="primary" onClick={() => {
+        // handleDeleteOccasion()
+        // componentWillMount(userId)
+        }}>
+            Delete
         </Button>
-      </CardActions>
-    </Card>
-  ))
-  )}
+        </CardActions>
+      </Card>
+    )
+    )
+  )
+}
 
 
 

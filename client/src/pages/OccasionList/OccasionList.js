@@ -34,6 +34,13 @@ class OccasionList extends Component {
         Occasion.getAll()
     }
 
+    handleDeleteOccasion = newOcc => {
+        Occasion.deleteOne(this.state.id)
+        .then(({data}) => {
+            this.setState({occList: data})
+    })}
+
+
     render() {
         return (
             <>
