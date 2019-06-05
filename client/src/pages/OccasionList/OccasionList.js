@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import occForm from '../../components/CreateOccasion'
 import Type from '../../components/OccForm/Type'
 import Date from '../../components/OccForm/Date'
 import Description from '../../components/OccForm/Description'
@@ -59,7 +58,8 @@ class OccasionList extends Component {
         }
     }
 
-    handleDeleteOccasion = newOcc => {
+    handleDeleteOccasion = _ => {
+        console.log('Here I am!')
         Occasion.deleteOne(this.state.id)
         .then(({data}) => {
             this.setState({occList: data})
@@ -75,6 +75,7 @@ class OccasionList extends Component {
                 <OccCard 
                     newOcc={this.state.occList}
                     handleSelectChange={this.state.type}
+                    handleDeleteOccasion={this.handleDeleteOccasion}
                 />
             </>
         )

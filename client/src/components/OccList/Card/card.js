@@ -82,8 +82,8 @@ function OccCard({ newOcc }) {
             Wish List
         </Button>
           <Button id='delete' size="small" color="primary" onClick={() => {
-        // handleDeleteOccasion()
-        // componentWillMount(userId)
+            handleDeleteOccasion()
+         // componentWillMount(userId)
         }}>
             Delete
         </Button>

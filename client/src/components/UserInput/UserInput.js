@@ -1,4 +1,5 @@
 import React from 'react'
+import './UserInput.css'
 import { makeStyles } from '@material-ui/core/styles'
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
@@ -73,7 +74,7 @@ function UserInput() {
                 variant="outlined"
             />
             <div>
-                <Button component={ Link } to='/OccasionList' variant="contained" color="primary" className={classes.button} onClick>
+                <Button id='login' component={ Link } to='/OccasionList' variant="contained" color="primary" className={classes.button} onClick>
                     Login
       </Button>
             </div>
