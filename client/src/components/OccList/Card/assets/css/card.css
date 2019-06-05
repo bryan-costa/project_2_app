@@ -1,0 +1,21 @@
+#cardImage {
+    background-image: url(../images/balloons.png)
+    /* background-image: url(../images/wedding.jpg) */
+}
+
+#name {
+    color: #807F7F;
+    font-weight: bold;
+}
+
+#description {
+    color: #807F7F;
+}
+
+#update, #wishList, #delete {
+    /* height: 26px; */
+    background-color: #4ADDAF;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
