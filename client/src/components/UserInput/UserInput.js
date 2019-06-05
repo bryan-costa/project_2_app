@@ -73,7 +73,7 @@ function UserInput() {
                 variant="outlined"
             />
             <div>
-                <Button component={ Link } to='/EventList' variant="contained" color="primary" className={classes.button} onClick>
+                <Button component={ Link } to='/OccasionList' variant="contained" color="primary" className={classes.button} onClick>
                     Login
       </Button>
             </div>

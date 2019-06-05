@@ -26,14 +26,41 @@ const useStyles = makeStyles({
   },
 });
 
+// const handleSelectImage = (type) => {
+//     switch ({type}) {
+//       case 'birthday':
+//         console.log('birthday')
+//         this.CardMedia.style.backgroundImage = "url('./assets/images/balloons.png"
+//         break
+//       case 'wedding':
+//         console.log('wedding')
+//         document.body.style.backgroundImage = "url('./assets/images/wedding.jpg"
+//         break
+//       case 'valentines':
+//         console.log('valentines')
+//         document.body.style.backgroundImage = "url('./assets/images/valentines.jpg"
+//         break
+//       case 'baby':
+//         console.log('baby')
+//         document.body.style.backgroundImage = "url('./assets/images/balloons.png"
+//         break
+//       case 'because':
+//         console.log('because')
+//         document.body.style.backgroundImage = "url('./assets/images/balloons.png"
+//         break
+//     }
+// }
+
+
 function OccCard({ newOcc }) {
   const classes = useStyles();
 
   return (
-    newOcc.map(({ userId, id, name, description, handleDeleteOccasion }) => (
+    newOcc.map(({ userId, id, name, type, description, handleSelectImage, handleDeleteOccasion }) => (
       <Card className={classes.card}>
         <CardActionArea>
           <CardMedia
+            image={() => {handleSelectImage()}}
             className={classes.media}
             id='cardImage'
             title="Birthday Balloons"

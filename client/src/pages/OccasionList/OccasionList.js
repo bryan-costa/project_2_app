@@ -34,6 +34,31 @@ class OccasionList extends Component {
         Occasion.getAll()
     }
 
+    handleSelectImage = (type) => {
+        switch ({type}) {
+          case 'birthday':
+            console.log('birthday')
+            this.document.CardMedia.style.backgroundImage = "url('./assets/images/balloons.png"
+            break
+          case 'wedding':
+            console.log('wedding')
+            this.document.CardMedia.style.backgroundImage = "url('./assets/images/wedding.jpg"
+            break
+          case 'valentines':
+            console.log('valentines')
+            document.body.style.backgroundImage = "url('./assets/images/valentines.jpg"
+            break
+          case 'baby':
+            console.log('baby')
+            document.body.style.backgroundImage = "url('./assets/images/balloons.png"
+            break
+          case 'because':
+            console.log('because')
+            document.body.style.backgroundImage = "url('./assets/images/balloons.png"
+            break
+        }
+    }
+
     handleDeleteOccasion = newOcc => {
         Occasion.deleteOne(this.state.id)
         .then(({data}) => {
@@ -46,9 +71,10 @@ class OccasionList extends Component {
             <>
                 <OccListBtn // handleGetOccasions={this.handleGetOccasions} 
                 />
-                <h1 style={{ textAlign: 'center', color: '#707070' }}>Upcoming Events</h1>
+                <h2 style={{ textAlign: 'center', color: '#707070' }}>Upcoming Events</h2>
                 <OccCard 
                     newOcc={this.state.occList}
+                    handleSelectChange={this.state.type}
                 />
             </>
         )
