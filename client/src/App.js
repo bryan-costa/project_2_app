@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Login from './pages/Login'
 import OccasionList from './pages/OccasionList'
 import CreateOccasion from './pages/CreateOccasion'
+import UpdateOccasion from './pages/UpdateOccasion'
 // import EventList from './pages/EventList'
 import Messages from './pages/Messages'
 import Profile from './pages/Profile'
@@ -24,6 +25,7 @@ class App extends Component {
           <Route path="/CreateOccasion" component={CreateOccasion} />
           {/* <Route path="/EventList" component={EventList} /> */}
           <Route exact path="/OccasionList" component={OccasionList} />
+          <Route exact path="/UpdateOccasion" component={UpdateOccasion} />
           {/* <Route exact path="/AddToWishList" component={AddToWishList} /> */}
           <Route exact path="/Messages" component={Messages} />
           <Route exact path="/Profile" component={Profile} />

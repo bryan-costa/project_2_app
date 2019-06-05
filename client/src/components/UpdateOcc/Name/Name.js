@@ -1,9 +1,6 @@
 import React, { Component } from 'react'
-import './Name.css'
 import PropTypes from 'prop-types'
 import { withStyles } from '@material-ui/core/styles'
-// import SwipeableDrawer from '@material-ui/core/SwipeableDrawer'
-// import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import { makeStyles } from '@material-ui/core/styles';
 
@@ -24,14 +21,10 @@ const useStyles = makeStyles(theme => ({
 
 
 
-class Name extends Component {
+class UpdateName extends Component {
 
     render() {
         const { classes, name, item, onItemChange, FormControl, InputLabel, Select, handleChange, inputLabel, values, OutlinedInput, labelWidth } = this.props
-
-        // const handleChange = name => event => {
-        //   setValues({ ...values, [name]: event.target.value });
-        // }
         
         return (
             <>
@@ -60,4 +53,4 @@ class Name extends Component {
 
 
 
-export default Name
+export default UpdateName

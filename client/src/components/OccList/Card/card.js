@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import './assets/css/card.css'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
@@ -75,7 +75,7 @@ function OccCard({ newOcc }) {
           </CardContent>
         </CardActionArea>
         <CardActions style={{ marginLeft: '8%', marginRight: '5%' }}>
-          <Button id='update' size="small" backgroundGolor="#4ADDAF">
+          <Button id='update' size="small" backgroundGolor="#4ADDAF" href={'/UpdateOccasion'}>
             Update
         </Button>
           <Button id='wishList' size="small" color="#4ADDAF">
