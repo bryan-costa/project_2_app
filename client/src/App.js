@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Login from './pages/Login'
+import OccasionList from './pages/OccasionList'
 import CreateOccasion from './pages/CreateOccasion'
 import AddToWishList from './pages/AddToWishList'
 import Messages from './pages/Messages'
 import Profile from './pages/Profile'
 import LabelBottomNavigation from './components/bottomNav'
 import TopNav from './components/TopNav'
+import ViewFriends from './pages/ViewFriends'
 
 
 
@@ -19,10 +21,12 @@ class App extends Component {
     <Route component={CreateEvent => <CreateEvent />} /> */}
           <TopNav />
           <Route exact path="/" component={Login} />
+          <Route exact path="/OccasionList" component={OccasionList} />
           <Route exact path="/CreateOccasion" component={CreateOccasion} />
           <Route exact path="/AddToWishList" component={AddToWishList} />
           <Route exact path="/Messages" component={Messages} />
           <Route exact path="/Profile" component={Profile} />
+          <Route exact path="/ViewFriends" component={ViewFriends} />
           <LabelBottomNavigation />
         </div>
       </Router>

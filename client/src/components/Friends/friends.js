@@ -1,16 +1,7 @@
-import React from 'react';
-import SearchBar from 'material-ui-search-bar'
- 
-// ...
-render() {
-  return(
-    <SearchBar
-      onChange={() => console.log('onChange')}
-      onRequestSearch={() => console.log('onRequestSearch')}
-      style={{
-        margin: '0 auto',
-        maxWidth: 100%,
-      }}
-    />
-  )
-}
+import React from 'react'
+
+const WishList = _ => 
+<div>
+</div>
+
+export default WishList
