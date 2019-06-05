@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Login from './pages/Login'
+import OccasionList from './pages/OccasionList'
 import CreateOccasion from './pages/CreateOccasion'
 import EventList from './pages/EventList'
 import Messages from './pages/Messages'
@@ -22,9 +23,11 @@ class App extends Component {
           <Route exact path="/" component={Login} />
           <Route path="/CreateOccasion" component={CreateOccasion} />
           <Route path="/EventList" component={EventList} />
-          <Route path="/Messages" component={Messages} />
-          <Route path="/Profile" component={Profile} />
-          <Route path="/ViewFriends" component={ViewFriends} />
+          <Route exact path="/OccasionList" component={OccasionList} />
+          {/* <Route exact path="/AddToWishList" component={AddToWishList} /> */}
+          <Route exact path="/Messages" component={Messages} />
+          <Route exact path="/Profile" component={Profile} />
+          <Route exact path="/ViewFriends" component={ViewFriends} />
           <LabelBottomNavigation />
         </div>
       </Router>

@@ -29,7 +29,7 @@ class Date extends Component {
           label="Event Date"
           type="date"
           onChange={handleChange}
-          style={{ width: '90%', marginTop: '30px', marginLeft: '15px', marginRight: '15px', marginBottom: '20px' }}
+          style={{ fontSize: '35px', width: '90%', marginTop: '30px', marginLeft: '15px', marginRight: '15px', marginBottom: '20px' }}
           defaultValue="2019-06-08"
           // className={classes.textField}
           InputLabelProps={{
