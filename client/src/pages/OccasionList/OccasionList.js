@@ -21,7 +21,7 @@ class OccasionList extends Component {
     }
 
     componentWillMount () {
-        Occasion.getAll()
+        Occasion.getSome(1)
         .then(({data}) => {
             this.setState({occList: data})
         })

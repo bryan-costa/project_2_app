@@ -2,12 +2,11 @@ const { Occasion } = require('../models')
 
 module.exports = app => {
     // GET all Occasions for a particular userID
-    // this is working!
-    // app.get('/occasions', (req, res) => {
-    //     Occasion.findAll({ where: { userId: req.params.userId } })
-    //         .then(occasion => res.json(occasion))
-    //         .catch(e => console.log(e))
-    // })
+    app.get('/occasions/:userId', (req, res) => {
+        Occasion.findAll({ where: { userId: req.params.userId } })
+            .then(occasion => res.json(occasion))
+            .catch(e => console.log(e))
+    })
     // GET one Occasion
     // this is working!
     app.get('/occasions/:id', (req, res) => {
