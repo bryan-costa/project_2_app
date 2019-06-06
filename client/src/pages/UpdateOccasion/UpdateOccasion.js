@@ -34,6 +34,12 @@ class UpdateOccasion extends Component {
         //         console.log(occList)
         // }
 
+        componentWillMount = (cardData) => {
+                let editOcc = localStorage.getItem('cardData')
+                console.log(localStorage.getItem('cardData.name'))
+
+        }
+
         handleChange = event => {
                 if (event.target.name) {
                     return this.setState({
