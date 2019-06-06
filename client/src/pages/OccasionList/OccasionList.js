@@ -58,6 +58,14 @@ class OccasionList extends Component {
         }
     }
 
+    handleStorage = ({id, name, type, date, description}) => {
+        let cardData = {id, name, type, date, description}
+        localStorage.setItem('update', JSON.stringify(cardData))
+        window.location = '/UpdateOccasion'
+        console.log(cardData)
+    }
+
+
     handleDeleteOccasion = (id) => {
         console.log('Here I am!')
         Occasion.deleteOne(id)
@@ -78,6 +86,7 @@ class OccasionList extends Component {
                 <OccCard
                     newOcc={this.state.occList}
                     handleSelectChange={this.state.type}
+                    handleStorage={this.handleStorage}
                     handleDeleteOccasion={this.handleDeleteOccasion}
                 />
             </>
