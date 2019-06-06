@@ -8,6 +8,7 @@ import Profile from './pages/Profile'
 import LabelBottomNavigation from './components/bottomNav'
 import TopNav from './components/TopNav'
 import ViewFriends from './pages/ViewFriends'
+import IronmanPage from './pages/IronmanPage'
 
 
 
@@ -16,8 +17,6 @@ class App extends Component {
     return (
       <Router>
         <div>
-          {/* <Route component={_ => <Login />} />
-    <Route component={CreateEvent => <CreateEvent />} /> */}
           <TopNav />
           <Route exact path="/" component={Login} />
           <Route path="/CreateOccasion" component={CreateOccasion} />
@@ -25,6 +24,7 @@ class App extends Component {
           <Route path="/Messages" component={Messages} />
           <Route path="/Profile" component={Profile} />
           <Route path="/ViewFriends" component={ViewFriends} />
+          <Route path="/IronmanPage" component={IronmanPage} />
           <LabelBottomNavigation />
         </div>
       </Router>
