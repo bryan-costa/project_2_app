@@ -19,6 +19,11 @@ const useStyles = makeStyles(theme => ({
     input: {
       display: 'none',
     },
+    formDiv:{
+      marginTop: '30px',
+      marginLeft: '15%',
+      marginRight: '15%',
+    }
   }));
 
 
@@ -36,25 +41,37 @@ const useStyles = makeStyles(theme => ({
     //     }
     
 
-const SearchForm = () => {
+const AddExperience = () => {
     const classes = useStyles()
     // const {item} = this.props
 
     return(
         <>
+        <div className={classes.formDiv}>
+
         <TextField
-        // id="search"
-        label="Input a search field"
-        // value={search}
+        // id="url"
+        label="URL"
+        // value={url}
         variant="outlined"
         />
-         <Button id='addExperience' variant="contained" color="primary" Selected ClassName="selBtn" className={classes.button} onClick={() => {
-       
-        }}>
+        <TextField
+        //   id="experience"
+          label="Experience Name"
+        //   value={experiencename}
+          variant="outlined"
+        />
+        <TextField
+        //   id="cost"
+          label="cost"
+        //   value={cost}
+          variant="outlined"
+        />
+        </div>
+         <Button id='addExperience' variant="contained" color="primary" Selected ClassName="selBtn" className={classes.button}>
         Add Experience
-      </Button>
-        
-</>
+      </Button> 
+      </>
       )
         }
             
@@ -72,4 +89,4 @@ const SearchForm = () => {
 
   
 
-export default SearchForm
+export default AddExperience
