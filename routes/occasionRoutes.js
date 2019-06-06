@@ -4,7 +4,10 @@ module.exports = app => {
     // GET all Occasions for a particular userID
     // this is working!
     app.get('/occasions/:userId', (req, res) => {
-        Occasion.findAll({ where: { userId: req.params.userId } })
+        Occasion.findAll(
+            { where: { userId: req.params.userId },
+            order: [['id', 'DESC'],],
+        })
             .then(occasion => res.json(occasion))
             .catch(e => console.log(e))
     })
