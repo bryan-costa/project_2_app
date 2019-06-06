@@ -17,23 +17,6 @@ class UpdateOccasion extends Component {
                 occList: []
         }
 
-        // handleFormSubmit = event => {
-        //         console.log("Here I am!")
-        //         let occList = this.state.occList
-        //         let newOcc = {
-        //                 name: this.state.name,
-        //                 type: this.state.type,
-        //                 description: this.state.description,
-        //                 date: this.state.date,
-        //                 userId: 7
-        //         }
-        //         Occasion.postOne(newOcc)
-        //         this.state.occList.push(newOcc)
-        //         this.setState({ ...newOcc })
-        //         console.log(newOcc)
-        //         console.log(occList)
-        // }
-
         componentWillMount = (cardData) => {
                 let editOcc = localStorage.getItem('cardData')
                 console.log(localStorage.getItem('cardData.name'))
@@ -50,6 +33,24 @@ class UpdateOccasion extends Component {
                         [event.target.id]: event.target.value
                 })
         }
+
+        // handleSubmitUpdate = event => {
+        //         console.log("Here I am!")
+        //         let occList = this.state.occList
+        //         let newOcc = {
+        //                 name: this.state.name,
+        //                 type: this.state.type,
+        //                 description: this.state.description,
+        //                 date: this.state.date,
+        //                 userId: 7
+        //         }
+        //         Occasion.postOne(newOcc)
+        //         this.state.occList.push(newOcc)
+        //         this.setState({ ...newOcc })
+        //         console.log(newOcc)
+        //         console.log(occList)
+        // }
+
 
 
         render() {
