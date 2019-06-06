@@ -13,7 +13,7 @@ const useStyles = makeStyles(theme => ({
         },
         imageArt: {
         display: 'block',
-        marginTop: 80,
+        marginTop: 40,
         },
       logo:{
         margin: '60px',
