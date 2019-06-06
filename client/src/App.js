@@ -12,6 +12,8 @@ import TopNav from './components/TopNav'
 import ViewFriends from './pages/ViewFriends'
 import IronmanPage from './pages/IronmanPage'
 import IronmanWishList from './pages/IronmanWishList'
+import ContributePage from './pages/ContributePage'
+import Contributed from './pages/Contributed'
 
 
 
@@ -29,6 +31,8 @@ class App extends Component {
           <Route path="/ViewFriends" component={ViewFriends} />
           <Route path="/IronmanPage" component={IronmanPage} />
           <Route path="/IronmanWishList" component={IronmanWishList} />
+          <Route path="/ContributePage" component={ContributePage} />
+          <Route path="/Contributed" component={Contributed} />
           <LabelBottomNavigation />
         </div>
       </Router>

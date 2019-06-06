@@ -74,9 +74,15 @@ function UserInput() {
                 variant="outlined"
             />
             <div>
-                <Button id='login' component={ Link } to='/OccasionList' variant="contained" color="primary" className={classes.button} onClick>
+                <Button id='login' component={ Link } to='/OccasionList' variant="contained" color="primary" className={classes.button}>
                     Login
-      </Button>
+                </Button>
+
+                {/* <Button component={ Link } to='/ViewFriends' className={classes.button} variant="outlined" className={classes.button}>
+                Friends
+                </Button> */}
+
+
             </div>
         </form>
     );
