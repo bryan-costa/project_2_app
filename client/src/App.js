@@ -4,12 +4,14 @@ import Login from './pages/Login'
 import OccasionList from './pages/OccasionList'
 import CreateOccasion from './pages/CreateOccasion'
 import UpdateOccasion from './pages/UpdateOccasion'
-// import EventList from './pages/EventList'
+// import AddToWishList from './pages/AddToWishList'
 import Messages from './pages/Messages'
 import Profile from './pages/Profile'
 import LabelBottomNavigation from './components/bottomNav'
 import TopNav from './components/TopNav'
 import ViewFriends from './pages/ViewFriends'
+// import AddExperience from './components/AddToWishList/addExperience.js'
+import SearchResults from './components/SearchResults/SearchResults.js'
 import IronmanPage from './pages/IronmanPage'
 import IronmanWishList from './pages/IronmanWishList'
 import ContributePage from './pages/ContributePage'
@@ -39,7 +41,6 @@ class App extends Component {
     )
   }
 }
-
 
 
 

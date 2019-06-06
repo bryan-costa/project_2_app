@@ -19,11 +19,11 @@ class OccasionList extends Component {
         occList: []
     }
 
-    componentWillMount () {
+    componentWillMount() {
         Occasion.getSome(1)
-        .then(({data}) => {
-            this.setState({occList: data})
-        })
+            .then(({ data }) => {
+                this.setState({ occList: data })
+            })
     }
 
 
@@ -34,36 +34,39 @@ class OccasionList extends Component {
     }
 
     handleSelectImage = (type) => {
-        switch ({type}) {
-          case 'birthday':
-            console.log('birthday')
-            this.document.CardMedia.style.backgroundImage = "url('./assets/images/balloons.png"
-            break
-          case 'wedding':
-            console.log('wedding')
-            this.document.CardMedia.style.backgroundImage = "url('./assets/images/wedding.jpg"
-            break
-          case 'valentines':
-            console.log('valentines')
-            document.body.style.backgroundImage = "url('./assets/images/valentines.jpg"
-            break
-          case 'baby':
-            console.log('baby')
-            document.body.style.backgroundImage = "url('./assets/images/balloons.png"
-            break
-          case 'because':
-            console.log('because')
-            document.body.style.backgroundImage = "url('./assets/images/balloons.png"
-            break
+        switch ({ type }) {
+            case 'birthday':
+                console.log('birthday')
+                this.document.CardMedia.style.backgroundImage = "url('./assets/images/balloons.png"
+                break
+            case 'wedding':
+                console.log('wedding')
+                this.document.CardMedia.style.backgroundImage = "url('./assets/images/wedding.jpg"
+                break
+            case 'valentines':
+                console.log('valentines')
+                document.body.style.backgroundImage = "url('./assets/images/valentines.jpg"
+                break
+            case 'baby':
+                console.log('baby')
+                document.body.style.backgroundImage = "url('./assets/images/balloons.png"
+                break
+            case 'because':
+                console.log('because')
+                document.body.style.backgroundImage = "url('./assets/images/balloons.png"
+                break
         }
     }
 
-    handleDeleteOccasion = _ => {
+    handleDeleteOccasion = (id) => {
         console.log('Here I am!')
-        Occasion.deleteOne(this.state.id)
-        .then(({data}) => {
-            this.setState({occList: data})
-    })}
+        Occasion.deleteOne(id)
+            .then(({ data }) => {
+                this.setState({
+                    occList: this.state.occList.filter(occ => occ.id !== id)
+                })
+            })
+    }
 
 
     render() {
@@ -72,7 +75,7 @@ class OccasionList extends Component {
                 <OccListBtn // handleGetOccasions={this.handleGetOccasions} 
                 />
                 <h2 style={{ textAlign: 'center', color: '#707070' }}>Upcoming Events</h2>
-                <OccCard 
+                <OccCard
                     newOcc={this.state.occList}
                     handleSelectChange={this.state.type}
                     handleDeleteOccasion={this.handleDeleteOccasion}

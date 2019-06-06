@@ -26,41 +26,34 @@ const useStyles = makeStyles({
   },
 });
 
-// const handleSelectImage = (type) => {
-//     switch ({type}) {
-//       case 'birthday':
-//         console.log('birthday')
-//         this.CardMedia.style.backgroundImage = "url('./assets/images/balloons.png"
-//         break
-//       case 'wedding':
-//         console.log('wedding')
-//         document.body.style.backgroundImage = "url('./assets/images/wedding.jpg"
-//         break
-//       case 'valentines':
-//         console.log('valentines')
-//         document.body.style.backgroundImage = "url('./assets/images/valentines.jpg"
-//         break
-//       case 'baby':
-//         console.log('baby')
-//         document.body.style.backgroundImage = "url('./assets/images/balloons.png"
-//         break
-//       case 'because':
-//         console.log('because')
-//         document.body.style.backgroundImage = "url('./assets/images/balloons.png"
-//         break
-//     }
-// }
+const handleSelectImage = (type) => {
+    switch (type) {
+      case 'birthday':
+        console.log('birthday')
+        return "/images/balloons.png"
+      case 'wedding':
+        console.log('wedding')
+        return "/images/wedding.jpg"
+      case 'valentines':
+        console.log('valentines')
+        return '/images/valentines.jpg'
+      case 'baby':
+        return '/images/baby.jpg'
+      case 'because':
+        return '/images/sky.jpg'
+    }
+}
 
 
-function OccCard({ newOcc }) {
+function OccCard({ newOcc = [], handleDeleteOccasion }) {
   const classes = useStyles();
-
   return (
-    newOcc.map(({ userId, id, name, type, description, handleSelectImage, handleDeleteOccasion }) => (
-      <Card className={classes.card}>
+    newOcc.map(({ userId, id, name, type, description }) => {
+      const image = handleSelectImage(type)
+      return <Card className={classes.card}>
         <CardActionArea>
           <CardMedia
-            image={() => {handleSelectImage()}}
+            image={image}
             className={classes.media}
             id='cardImage'
             title="Birthday Balloons"
@@ -78,20 +71,16 @@ function OccCard({ newOcc }) {
           <Button id='update' size="small" backgroundGolor="#4ADDAF" href={'/UpdateOccasion'}>
             Update
         </Button>
-          <Button id='wishList' size="small" color="#4ADDAF">
+          <Button id='wishList' size="small" color="#4ADDAF" href={'/searchForm'}>
             Wish List
         </Button>
-          <Button id='delete' size="small" color="primary" onClick={() => {
-            handleDeleteOccasion()
-         // componentWillMount(userId)
-        }}>
+          <Button id='delete' size="small" color="primary" onClick={() => handleDeleteOccasion(id)}>
             Delete
         </Button>
         </CardActions>
       </Card>
-    )
-    )
-  )
+    }
+  ))
 }
 
 
