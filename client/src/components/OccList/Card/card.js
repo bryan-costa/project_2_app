@@ -39,9 +39,9 @@ const handleSelectImage = (type) => {
         console.log('valentines')
         return '/images/valentines.jpg'
       case 'baby':
-        console.log('baby')
-        console.log('because')
         return '/images/baby.jpg'
+      case 'because':
+        return '/images/sky.jpg'
     }
 }
 
