@@ -8,6 +8,8 @@ import Profile from './pages/Profile'
 import LabelBottomNavigation from './components/bottomNav'
 import TopNav from './components/TopNav'
 import ViewFriends from './pages/ViewFriends'
+import SearchResults from './components/SearchResults/SearchResults.js'
+
 
 
 
@@ -25,6 +27,8 @@ class App extends Component {
           <Route path="/Messages" component={Messages} />
           <Route path="/Profile" component={Profile} />
           <Route path="/ViewFriends" component={ViewFriends} />
+          <Route path="/search" component={SearchResults } />
+
           <LabelBottomNavigation />
         </div>
       </Router>
