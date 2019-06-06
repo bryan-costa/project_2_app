@@ -68,7 +68,7 @@ function SearchAppBar() {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search…"
+              placeholder="Find Friends"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
