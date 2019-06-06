@@ -24,7 +24,7 @@ const useStyles = makeStyles(theme => ({
 
 
 
-class Description extends Component {
+class Name extends Component {
 
     render() {
         const { classes, name, item, onItemChange, FormControl, InputLabel, Select, handleChange, inputLabel, values, OutlinedInput, labelWidth } = this.props
@@ -60,4 +60,4 @@ class Description extends Component {
 
 
 
-export default Description
+export default Name

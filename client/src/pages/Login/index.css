@@ -1,5 +1,11 @@
 .image {
     margin: auto;
-    padding-top: 30px;
+    padding-top: 20px;
+    display: block
+}
+
+.imageArt {
+    margin: auto;
+    padding-top: 80px;
     display: block
 }
