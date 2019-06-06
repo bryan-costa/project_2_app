@@ -11,6 +11,7 @@ import LabelBottomNavigation from './components/bottomNav'
 import TopNav from './components/TopNav'
 import ViewFriends from './pages/ViewFriends'
 import IronmanPage from './pages/IronmanPage'
+import IronmanWishList from './pages/IronmanWishList'
 
 
 
@@ -22,14 +23,12 @@ class App extends Component {
           <TopNav />
           <Route exact path="/" component={Login} />
           <Route exact path="/CreateOccasion" component={CreateOccasion} />
-          <Route exact path="/IronmanPage" component={IronmanPage} />
-          {/* <Route path="/EventList" component={EventList} /> */}
           <Route exact path="/OccasionList" component={OccasionList} />
-          <Route exact path="/UpdateOccasion" component={UpdateOccasion} />
-          {/* <Route exact path="/AddToWishList" component={AddToWishList} /> */}
           <Route exact path="/Messages" component={Messages} />
           <Route exact path="/Profile" component={Profile} />
           <Route exact path="/ViewFriends" component={ViewFriends} />
+          <Route exact path="/IronmanPage" component={IronmanPage} />
+          <Route exact path="/IronmanWishList" component={IronmanWishList} />
           <LabelBottomNavigation />
         </div>
       </Router>

@@ -37,6 +37,11 @@ const styles = theme => ({
       paddingTop: 10,
       fontSize: 12,
   },
+  name: {
+    marginTop: 'auto',
+    marginBottom: 'auto',
+    margin: '30',
+  },
 });
 
 
@@ -52,15 +57,11 @@ function AutoGridNoWrap(props) {
           <Grid item>
           <Avatar alt="Remy Sharp" src={IronMan1} className={classes.bigAvatar} /> 
           </Grid>
-          <Grid item xs>
-          <div className={classes.buttonbox}>
           <h3 className={classes.name}>Iron Man</h3>
 
-          <Button component={ Link } to='/AddToWishList' className={classes.button} variant="outlined" className={classes.button}>
+          {/* <Button component={ Link } to='/AddToWishList' className={classes.button} variant="outlined" className={classes.button}>
            Wishlist
-          </Button > 
-          </div>
-          </Grid>
+          </Button >  */}
         </Grid>
       </Paper>
         <div className={classes.events}>
