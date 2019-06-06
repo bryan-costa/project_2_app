@@ -58,11 +58,13 @@ class OccasionList extends Component {
         }
     }
 
-    handleDeleteOccasion = _ => {
+    handleDeleteOccasion = (id) => {
         console.log('Here I am!')
-        Occasion.deleteOne(this.state.id)
+        Occasion.deleteOne(id)
             .then(({ data }) => {
-                this.setState({ occList: data })
+                this.setState({
+                    occList: this.state.occList.filter(occ => occ.id !== id)
+                })
             })
     }
 

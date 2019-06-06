@@ -27,7 +27,6 @@ const useStyles = makeStyles({
 });
 
 const handleSelectImage = (type) => {
-    console.log('sadfafdas ', type)
     switch (type) {
       case 'birthday':
         console.log('birthday')
@@ -46,11 +45,10 @@ const handleSelectImage = (type) => {
 }
 
 
-function OccCard({ newOcc }) {
+function OccCard({ newOcc = [], handleDeleteOccasion }) {
   const classes = useStyles();
-  console.log('hellloooooooooo')
   return (
-    newOcc.map(({ userId, id, name, type, description, handleDeleteOccasion }) => {
+    newOcc.map(({ userId, id, name, type, description }) => {
       const image = handleSelectImage(type)
       return <Card className={classes.card}>
         <CardActionArea>
@@ -73,13 +71,10 @@ function OccCard({ newOcc }) {
           <Button id='update' size="small" backgroundGolor="#4ADDAF" href={'/UpdateOccasion'}>
             Update
         </Button>
-          <Button id='wishList' size="small" color="#4ADDAF">
+          <Button id='wishList' size="small" color="#4ADDAF" href={'/searchForm'}>
             Wish List
         </Button>
-          <Button id='delete' size="small" color="primary" onClick={() => {
-            handleDeleteOccasion()
-         // componentWillMount(userId)
-        }}>
+          <Button id='delete' size="small" color="primary" onClick={() => handleDeleteOccasion(id)}>
             Delete
         </Button>
         </CardActions>
