@@ -33,30 +33,30 @@ class OccasionList extends Component {
         Occasion.getAll()
     }
 
-    handleSelectImage = (type) => {
-        switch ({type}) {
-          case 'birthday':
-            console.log('birthday')
-            this.document.CardMedia.style.backgroundImage = "url('./assets/images/balloons.png"
-            break
-          case 'wedding':
-            console.log('wedding')
-            this.document.CardMedia.style.backgroundImage = "url('./assets/images/wedding.jpg"
-            break
-          case 'valentines':
-            console.log('valentines')
-            document.body.style.backgroundImage = "url('./assets/images/valentines.jpg"
-            break
-          case 'baby':
-            console.log('baby')
-            document.body.style.backgroundImage = "url('./assets/images/balloons.png"
-            break
-          case 'because':
-            console.log('because')
-            document.body.style.backgroundImage = "url('./assets/images/balloons.png"
-            break
-        }
-    }
+    // handleSelectImage = (type) => {
+    //     switch ({type}) {
+    //       case 'birthday':
+    //         console.log('birthday')
+    //         this.document.CardMedia.style.backgroundImage = "url('./assets/images/balloons.png"
+    //         break
+    //       case 'wedding':
+    //         console.log('wedding')
+    //         this.document.CardMedia.style.backgroundImage = "url('./assets/images/wedding.jpg"
+    //         break
+    //       case 'valentines':
+    //         console.log('valentines')
+    //         document.body.style.backgroundImage = "url('./assets/images/valentines.jpg"
+    //         break
+    //       case 'baby':
+    //         console.log('baby')
+    //         document.body.style.backgroundImage = "url('./assets/images/balloons.png"
+    //         break
+    //       case 'because':
+    //         console.log('because')
+    //         document.body.style.backgroundImage = "url('./assets/images/balloons.png"
+    //         break
+    //     }
+    // }
 
     handleDeleteOccasion = _ => {
         console.log('Here I am!')
