@@ -1,0 +1,29 @@
+#cardImage {
+    /* background-image: url(../images/balloons.png) */
+    /* background-image: url(../images/baby.jpg) */
+    background-image: url(../images/wedding.jpg)
+    /* background-image: url(../images/valentines.jpg) */
+}
+
+#name {
+    color: #807F7F;
+    font-weight: bold;
+}
+
+#description {
+    color: #807F7F;
+}
+
+#update, #wishList {
+    background-color: #4ADDAF;
+    color: white;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+#delete {
+    background-color: #EBEBEB;
+    color: #707070;
+    font-weight: bold;
+    font-size: 12px;
+}

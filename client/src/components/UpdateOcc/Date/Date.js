@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-class Date extends Component {
+class UpDate extends Component {
   render() {
 
     const { classes, date, container, item, onItemChange, FormControl, InputLabel, Select, handleChange, inputLabel, values, OutlinedInput, labelWidth } = this.props
@@ -41,22 +41,5 @@ class Date extends Component {
   }
 }
 
-// function Date (props) {
-//   const [selectedDate, handleDateChange] = useState(new Date());
 
-//   return (
-//       <KeyboardDatePicker
-//         id='date'
-//         autoOk
-//         variant="inline"
-//         inputVariant="outlined"
-//         label="Event Date"
-//         format="MM/dd/yyyy"
-//         value={'date'}
-//         InputAdornmentProps={{ position: "start" }}
-//         onChange={date => handleDateChange(date)}
-//       />
-//   );
-// }
-
-export default Date
+export default UpDate

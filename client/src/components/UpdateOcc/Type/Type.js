@@ -16,7 +16,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function Type({ handleChange, type }) {
+function UpdateType({ handleChange, type }) {
   const classes = useStyles();
 
   const inputLabel = React.useRef(null);
@@ -47,4 +47,4 @@ function Type({ handleChange, type }) {
   );
 }
 
-export default Type
+export default UpdateType

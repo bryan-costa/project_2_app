@@ -16,27 +16,45 @@ class CreateOccasion extends Component {
                 // need to get exact id for login button
                 // do i have to define this as a variable above?
                 // userid: localStorage.getItem('userLogin'),
+                userId: '',
                 occList: []
+        }
+
+        clearForm = _ => {
+                this.setState({
+                        name: '',
+                        type: '',
+                        date: '',
+                        description: '',  
+                })
         }
 
         handleFormSubmit = event => {
                 console.log("Here I am!")
+                let occList = this.state.occList
                 let newOcc = {
                         name: this.state.name,
                         type: this.state.type,
                         description: this.state.description,
                         date: this.state.date,
-                        // userid: this.state.userid
+                        userId: 7
                 }
                 Occasion.postOne(newOcc)
                 this.state.occList.push(newOcc)
-                this.setState({ newOcc })
+                this.setState({ ...newOcc })
                 console.log(newOcc)
-        //         // need to include navigation to the wish list page
+                console.log(occList)
         }
 
         handleChange = event => {
-                this.setState({ [event.target.id]: event.target.value })
+                if (event.target.name) {
+                    return this.setState({
+                        [event.target.name]: event.target.value
+                    })    
+                }
+                this.setState({
+                        [event.target.id]: event.target.value
+                })
         }
 
 
@@ -44,10 +62,14 @@ class CreateOccasion extends Component {
                 const { handleFormSubmit } = this.state
                 return (
                         <>
-                                <Name 
+                                <div style={{marginTop: '50px'}}>
+                                <h1 style={{ textAlign: 'center', color: '#707070'}}>Create New Event</h1>
+                                </div>
+                                <Name
                                         handleChange={this.handleChange}
                                 />
-                                <Type 
+                                <Type
+                                        type={this.state.type}
                                         handleChange={this.handleChange}
                                 />
                                 <Date
@@ -56,12 +78,14 @@ class CreateOccasion extends Component {
                                 <Description
                                         handleChange={this.handleChange}
                                 />
-                                <OccBtn 
+                                <OccBtn
                                         name={this.state.name}
                                         type={this.state.type}
                                         date={this.state.date}
                                         description={this.state.description}
                                         handleFormSubmit={this.handleFormSubmit}
+                                        // clearForm={this.clearForm}
+                                        // handleChange={this.handleChange}
                                 />
                         </>
                 )

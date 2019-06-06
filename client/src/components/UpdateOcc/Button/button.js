@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './Button.css'
 import PropTypes from 'prop-types'
 import { makeStyles } from '@material-ui/core/styles'
 import Button from '@material-ui/core/Button'
@@ -21,25 +20,20 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function OccBtn({handleFormSubmit, handleChange, clearForm}) {
+function UpdateBtn({handleUpdate, handleChange}) {
   const classes = useStyles()
-
-  // const submit = _ => {
-  //   console.log('Here I am!')
-  // }
 
   return (
     <div>
       <Button id='occBtn' href='/OccasionList' variant="contained" color="primary" Selected ClassName="selBtn" className={classes.button} onClick={() => {
-        handleFormSubmit()
+        handleUpdate()
         // clearForm()
         // handleChange()
         }}>
-        Create Event
+        Update Event
       </Button>
     </div>
   );
 }
 
-export default OccBtn
-
+export default UpdateBtn
