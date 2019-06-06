@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 // import TopNav from '../../components/TopNav'
 import ProfileTop from '../../components/ProfileTop'
 import BottomNav from '../../components/bottomNav'
