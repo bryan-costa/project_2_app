@@ -33,24 +33,8 @@ class UpdateOccasion extends Component {
                 })
         }
 
-        // handleSubmitUpdate = event => {
-        //         console.log("Here I am!")
-        //         let occList = this.state.occList
-        //         let newOcc = {
-        //                 name: this.state.name,
-        //                 type: this.state.type,
-        //                 description: this.state.description,
-        //                 date: this.state.date,
-        //                 userId: 7
-        //         }
-        //         Occasion.postOne(newOcc)
-        //         this.state.occList.push(newOcc)
-        //         this.setState({ ...newOcc })
-        //         console.log(newOcc)
-        //         console.log(occList)
-        // }
-
-
+        // DIDN'T GET TO THIS
+        // handleSubmitUpdate = event => {}
 
         render() {
                 const { handleUpdate } = this.state

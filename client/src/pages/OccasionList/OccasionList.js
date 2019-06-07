@@ -13,9 +13,6 @@ class OccasionList extends Component {
         type: '',
         date: '',
         description: '',
-        // need to get exact id for login button
-        // do i have to define this as a variable above?
-        // userid: localStorage.getItem('userLogin'),
         userId: '',
         occList: [],
         isEditing: false,
@@ -36,6 +33,7 @@ class OccasionList extends Component {
         Occasion.getAll()
     }
 
+    // function to select the image displayed on the card, depends on which 'type' is selected
     handleSelectImage = (type) => {
         switch ({ type }) {
             case 'birthday':
@@ -61,8 +59,9 @@ class OccasionList extends Component {
         }
     }
 
-    handleStorage = ({id, name, type, date, description}) => {
-        let cardData = {id, name, type, date, description}
+    // sends the card data to local storage to be called when user wants to edit the card
+    handleStorage = ({ id, name, type, date, description }) => {
+        let cardData = { id, name, type, date, description }
         localStorage.setItem('update', JSON.stringify(cardData))
         this.setState({ ...this.state, currentCard: cardData, isEditing: true })
         console.log(cardData)
@@ -83,9 +82,10 @@ class OccasionList extends Component {
     render() {
         return (
             <>
-                <OccListBtn // handleGetOccasions={this.handleGetOccasions} 
+                <OccListBtn
                 />
                 <h2 style={{ textAlign: 'center', color: '#707070' }}>Upcoming Events</h2>
+                {/* this works to populate the update form with existing data, but it does not allow the fields to be edited - I did not have time to research and fix */}
                 {this.state.isEditing ? <EditForm currentOcc={this.state.currentCard} /> : null}
                 <OccCard
                     newOcc={this.state.occList}
