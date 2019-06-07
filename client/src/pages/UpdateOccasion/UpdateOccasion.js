@@ -17,10 +17,9 @@ class UpdateOccasion extends Component {
                 occList: []
         }
 
-        componentWillMount = (cardData) => {
+        componentDidMount = (cardData) => {
                 let editOcc = localStorage.getItem('cardData')
-                console.log(localStorage.getItem('cardData.name'))
-
+                console.log(editOcc)
         }
 
         handleChange = event => {
@@ -55,22 +54,26 @@ class UpdateOccasion extends Component {
 
         render() {
                 const { handleUpdate } = this.state
+                const { currentOcc } = this.props
                 return (
                         <>
                                 <div style={{marginTop: '50px'}}>
                                 <h1 style={{ textAlign: 'center', color: '#707070'}}> Update Event Details</h1>
                                 </div>
                                 <UpdateName
+                                        name={currentOcc.name}
                                         handleChange={this.handleChange}
                                 />
                                 <UpdateType
-                                        type={this.state.type}
+                                        type={currentOcc.type}
                                         handleChange={this.handleChange}
                                 />
                                 <UpDate
+                                        date={currentOcc.date}
                                         handleChange={this.handleChange}
                                 />
                                 <UpdateDescription
+                                        description={currentOcc.description}
                                         handleChange={this.handleChange}
                                 />
                                 <UpdateBtn

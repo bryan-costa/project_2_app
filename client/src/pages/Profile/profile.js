@@ -63,7 +63,7 @@ class ProfilePage extends Component {
 
         handleStorage = ({ id, name, type, date, description }) => {
                 let cardData = { id, name, type, date, description }
-                localStorage.setItem('update', JSON.stringify(cardData))
+                localStorage.setItem('cardData', JSON.stringify(cardData))
                 window.location = '/UpdateOccasion'
                 console.log(cardData)
         }

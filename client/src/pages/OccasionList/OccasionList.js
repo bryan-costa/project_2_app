@@ -5,6 +5,7 @@ import Description from '../../components/OccForm/Description'
 import OccListBtn from '../../components/OccList/Button'
 import OccCard from '../../components/OccList/Card'
 import Occasion from '../../components/Utils/occasion.js'
+import EditForm from '../UpdateOccasion'
 
 class OccasionList extends Component {
     state = {
@@ -16,7 +17,9 @@ class OccasionList extends Component {
         // do i have to define this as a variable above?
         // userid: localStorage.getItem('userLogin'),
         userId: '',
-        occList: []
+        occList: [],
+        isEditing: false,
+        currentCard: {}
     }
 
     componentWillMount() {
@@ -61,7 +64,7 @@ class OccasionList extends Component {
     handleStorage = ({id, name, type, date, description}) => {
         let cardData = {id, name, type, date, description}
         localStorage.setItem('update', JSON.stringify(cardData))
-        window.location = '/UpdateOccasion'
+        this.setState({ ...this.state, currentCard: cardData, isEditing: true })
         console.log(cardData)
     }
 
@@ -83,6 +86,7 @@ class OccasionList extends Component {
                 <OccListBtn // handleGetOccasions={this.handleGetOccasions} 
                 />
                 <h2 style={{ textAlign: 'center', color: '#707070' }}>Upcoming Events</h2>
+                {this.state.isEditing ? <EditForm currentOcc={this.state.currentCard} /> : null}
                 <OccCard
                     newOcc={this.state.occList}
                     handleSelectChange={this.state.type}
