@@ -16,7 +16,7 @@ class CreateOccasion extends Component {
                 // need to get exact id for login button
                 // do i have to define this as a variable above?
                 // userid: localStorage.getItem('userLogin'),
-                userid: '',
+                userId: '',
                 occList: []
         }
 
@@ -41,8 +41,7 @@ class CreateOccasion extends Component {
                 }
                 Occasion.postOne(newOcc)
                 this.state.occList.push(newOcc)
-                this.setState({ newOcc })
-                this.state.occList.push(newOcc)
+                this.setState({ ...newOcc })
                 console.log(newOcc)
                 console.log(occList)
         }
@@ -63,8 +62,8 @@ class CreateOccasion extends Component {
                 const { handleFormSubmit } = this.state
                 return (
                         <>
-                                <div>
-                                        <img className='image' src="/images/logo.png" alt='logo' />
+                                <div style={{marginTop: '50px'}}>
+                                <h1 style={{ textAlign: 'center', color: '#707070'}}>Create New Event</h1>
                                 </div>
                                 <Name
                                         handleChange={this.handleChange}
