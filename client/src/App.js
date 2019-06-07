@@ -28,7 +28,7 @@ class App extends Component {
           <Route path="/Messages" component={Messages} />
           <Route path="/Profile" component={Profile} />
           <Route path="/ViewFriends" component={ViewFriends} />
-          <Route path="/search" component={AddExperience } />
+          <Route path="/search" component={SearchResults } />
           {/* <Route exact path="/" render={() => (
   loggedIn ? (
     <Redirect to="/dashboard"/>
