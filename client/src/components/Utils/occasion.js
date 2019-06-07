@@ -3,7 +3,7 @@ import axios from 'axios'
 const Occasion = {
     // POST one new occasion => is working
     postOne: newOcc => axios.post('/occasions', newOcc),
-    // DELETE one occasion =< is working
+    // DELETE one occasion => is working
     deleteOne: id => axios.delete(`occasions/${id}`),
     // GET all occasions for one userId => is working
     getSome: userId => axios.get(`/occasions/${userId}`)
