@@ -10,12 +10,11 @@ class SearchResults extends Component {
     }
 
 
-    searchHandler=()=>{
-        axios.get('/gifts').then(items=>{
-            console.log(items)
-        })
-    }
-     
+    searchHandler = () => {
+        axios.get('/gifts').then((({ data }) => {
+          console.log(data)
+        }))
+      }
 
     
    

@@ -28,9 +28,11 @@ class App extends Component {
           <Route exact path="/" component={Login} />
           <Route path="/CreateOccasion" component={CreateOccasion} />
           <Route path="/OccasionList" component={OccasionList} />
+          <Route path="/UpdateOccasion" component={UpdateOccasion} />
           <Route path="/Messages" component={Messages} />
           <Route path="/Profile" component={Profile} />
           <Route path="/ViewFriends" component={ViewFriends} />
+          <Route path="/search" component={SearchResults} />
           <Route path="/IronmanPage" component={IronmanPage} />
           <Route path="/IronmanWishList" component={IronmanWishList} />
           <Route path="/ContributePage" component={ContributePage} />
