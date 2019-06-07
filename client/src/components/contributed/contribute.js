@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import Toaster from '../../assets/images/Toaster.png'
 import Stars from '../../assets/images/Stars.png'
+import Heart from '../../assets/images/heart.png'
 import Lightsaber from '../../assets/images/Lightsaber.png'
 import Hawaii from '../../assets/images/hawaii.png'
 import { Link } from 'react-router-dom';
@@ -46,6 +47,10 @@ const styles = theme => ({
 price: {
     marginBottom: 20,
     marginTop: 3,
+},
+heart: {
+    marginTop: 20,
+
 }
 });
 
@@ -105,10 +110,13 @@ function AutoGridNoWrap(props) {
           <Grid item xs>
           <div className={classes.buttonbox}>
           <h5 className={classes.name}>Sky Diving in Hawaii</h5>
-          <h5 className={classes.price}>$599.99</h5>
-          <img src={Stars} className={classes.stars} /> 
-
-          <Button style={{color: '#fff'}} component={ Link } to='/ContributePage' className={classes.button} variant="outlined" className={classes.button}>
+          <h5 className={classes.price}>$499.99</h5>
+          <div className={classes.imgBox}>
+          <img src={Stars} className={classes.stars} />
+          <br /> 
+          <img src={Heart} className={classes.heart} /> 
+          </div>
+          <Button style={{color: '#fff'}} component={ Link } to='/Contributed' className={classes.button} variant="outlined" className={classes.button}>
           Contribute
           </Button>
           </div>

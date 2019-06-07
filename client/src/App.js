@@ -14,6 +14,8 @@ import ViewFriends from './pages/ViewFriends'
 import SearchResults from './components/SearchResults/SearchResults.js'
 import IronmanPage from './pages/IronmanPage'
 import IronmanWishList from './pages/IronmanWishList'
+import ContributePage from './pages/ContributePage'
+import Contributed from './pages/Contributed'
 
 
 
@@ -24,16 +26,15 @@ class App extends Component {
         <div>
           <TopNav />
           <Route exact path="/" component={Login} />
-          <Route exact path="/CreateOccasion" component={CreateOccasion} />
-          <Route exact path="/OccasionList" component={OccasionList} />
-          <Route exact path="/UpdateOccasion" component={UpdateOccasion} />
-          <Route exact path="/Messages" component={Messages} />
-          <Route exact path="/Profile" component={Profile} />
-          <Route exact path="/ViewFriends" component={ViewFriends} />
-          <Route exact path="/IronmanPage" component={IronmanPage} />
-          <Route exact path="/IronmanWishList" component={IronmanWishList} />
-          {/* <Route path="/AddToWishList" component={AddToWishList} /> */}
-          <Route path="/search" component={SearchResults} />
+          <Route path="/CreateOccasion" component={CreateOccasion} />
+          <Route path="/OccasionList" component={OccasionList} />
+          <Route path="/Messages" component={Messages} />
+          <Route path="/Profile" component={Profile} />
+          <Route path="/ViewFriends" component={ViewFriends} />
+          <Route path="/IronmanPage" component={IronmanPage} />
+          <Route path="/IronmanWishList" component={IronmanWishList} />
+          <Route path="/ContributePage" component={ContributePage} />
+          <Route path="/Contributed" component={Contributed} />
           <LabelBottomNavigation />
         </div>
       </Router>
