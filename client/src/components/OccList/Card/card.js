@@ -29,13 +29,10 @@ const useStyles = makeStyles({
 const handleSelectImage = (type) => {
     switch (type) {
       case 'birthday':
-        console.log('birthday')
         return "/images/balloons.png"
       case 'wedding':
-        console.log('wedding')
         return "/images/wedding.jpg"
       case 'valentines':
-        console.log('valentines')
         return '/images/valentines.jpg'
       case 'baby':
         return '/images/baby.jpg'
