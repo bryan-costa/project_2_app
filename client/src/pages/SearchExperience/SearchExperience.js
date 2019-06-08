@@ -84,6 +84,7 @@ class SearchExperience extends Component {
 
 
         {/* Search form begins */}
+        {/* Need to direct Add Experience to page with experience populated */}
         <div className={classes.formDiv}>
         <center><FormControl className={classes.FormControl}>
         <TextField
