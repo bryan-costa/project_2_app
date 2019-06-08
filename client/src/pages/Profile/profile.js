@@ -21,14 +21,6 @@ class ProfilePage extends Component {
                 userId: '',
                 occList: []
         }
-
-// const ProfilePage = _ =>
-//         <div>
-//         {/* <TopNav /> */}
-//         <ProfileTop />
-//         {/* <OccList /> */}
-//         <BottomNav />      
-//         </div>
         componentWillMount() {
                 Occasion.getSome(1)
                         .then(({ data }) => {
