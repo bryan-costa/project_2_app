@@ -1,78 +1,168 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 import axios from 'axios'
 import Button from '@material-ui/core/Button'
 import Card from '@material-ui/core/Card'
+import { withStyles } from '@material-ui/core/styles'
+import CardHeader from '@material-ui/core/CardHeader'
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+import Mercedes from '../../assets/images/Mercedes.jpeg'
+import Skull from '../../assets/images/skull.jpeg'
+import Dog from '../../assets/images/Dog.jpeg'
+import Rolex from '../../assets/images/Rolex.jpeg'
+import Apron from '../../assets/images/Apron.jpeg'
+
+
+
+const styles = theme => ({
+  card: {
+    display: 'flex',
+  },
+  details: {
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  content: {
+    flex: '1 0 auto',
+    paddingLeft: "20px"
+  },
+  cover: {
+    width: 150,
+  },
+  gifts: {
+    marginLeft: "40px",
+    marginBottom: "100px",
+    marginRight: "40px"
+  }
+});
 
 class SearchResults extends Component {
+  render() {
+    const { classes } = this.props
 
-    state ={
-       searchData: null
-    }
+    return (
+      <>
+        <div style={{ marginTop: '30px' }}>
+          <h1 style={{ textAlign: 'center', color: '#707070' }}>Gifts</h1>
+        </div>
+        <div className={classes.gifts}>
 
+          <Card className={classes.card}>
+            <div className={classes.details}>
+              <CardContent className={classes.content}>
+                <Typography component="h5" variant="h5">
+                  Mercedes
+          </Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                  $60,000
+          </Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                  Sleek, shiny and fast car of your Dreams.
+          </Typography>
+              </CardContent>
+            </div>
+            <CardMedia
+              className={classes.cover}
+              image={Mercedes}
+              title="Gift"
+            />
+          </Card>
+          <br />
 
-    searchHandler = () => {
-        axios.get('/gifts').then((({ data }) => {
-          console.log(data)
-        }))
-      }
+          <Card className={classes.card}>
+            <div className={classes.details}>
+              <CardContent className={classes.content}>
+                <Typography component="h5" variant="h5">
+                  Dinosaur Skull
+          </Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                  $200,000,000
+          </Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                  Would be a great addition to your living room.
+          </Typography>
+              </CardContent>
+            </div>
+            <CardMedia
+              className={classes.cover}
+              image={Skull}
+              title="Gift"
+            />
+          </Card>
+          <br />
 
-    
-   
-    // createCards()=>{
-    //     let items = this.state.searchData
-    // if(items){
-    //     for(var i = 0; i < items.length;i++){
-    //         return (
-    //             <div>
-    //                 {items.map(item => (<Card>
-    //                 <Card.Header>item.name</Card.Header>
-    //                 <Card.Body>item.description</Card.Body>
-    //                 <button}>Add to List</button>
-    //                 </Card>
-    //                 ))}
-    //             </div>
-            // )
-//         }
-//     }
-// }
+          <Card className={classes.card}>
+            <div className={classes.details}>
+              <CardContent className={classes.content}>
+                <Typography component="h5" variant="h5">
+                  Golden Retriever
+          </Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                  $500
+          </Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                  A fluffy best friend to follow you everywhere.
+          </Typography>
+              </CardContent>
+              <div className={classes.controls}>
+              </div>
+            </div>
+            <CardMedia
+              className={classes.cover}
+              image={Dog}
+              title="Gift"
+            />
+          </Card>
+          <br />
 
-    render(){
-        return(
-            <>
-            <h1> Data</h1>
-            <Button onClick={this.searchHandler} variant="outlined">Submit</Button>
-            </>
-        )
-    }
+          <Card className={classes.card}>
+            <div className={classes.details}>
+              <CardContent className={classes.content}>
+                <Typography component="h5" variant="h5">
+                  Rolex Watch
+          </Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                  $3,000
+          </Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                  You would never be late again & so fancy!
+          </Typography>
+              </CardContent>
+            </div>
+            <CardMedia
+              className={classes.cover}
+              image={Rolex}
+              title="Gift"
+            />
+          </Card>
+          <br />
+
+          <Card className={classes.card}>
+            <div className={classes.details}>
+              <CardContent className={classes.content}>
+                <Typography component="h5" variant="h5">
+                  Apron
+          </Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                  $15
+          </Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                  Inexpensive and useful gift for the cooks!
+          </Typography>
+              </CardContent>
+            </div>
+            <CardMedia
+              className={classes.cover}
+              image={Apron}
+              title="Gift"
+            />
+          </Card>
+        </div >
+      </>
+
+    )
+  }
 }
 
-
-//Name price picture
-
-// //----------------------------Search results component-------------------------//
-
-
-
-// //utilize the built in lifecycle method of react, componentWillMount to set the search result data (passed in as props) to this component's state 
-
-// ex. componentWillMount(){
-//     this.setState({
-//         searchData:  this.props.data
-//     })
-// }
-
-// // then have a function that will iterate through the data array and create the Material UI cards
-// //basic example of looping through the data set to create cards.. not 100% what you need but a good starting point
-
-
-// then in the render method of the SearchResults component:
-
-// render(){
-//     return(
-//         <div>
-//         {this.createCards()}
-//         </div>
-//     )
-
-
-export default SearchResults
+export default withStyles(styles)(SearchResults)

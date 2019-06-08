@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField'
 import { makeStyles } from '@material-ui/core/styles';
 import { Redirect } from 'react-router-dom'
+import FormControl from '@material-ui/core/FormControl';
 
 const styles = theme => ({
   button: {
@@ -25,7 +26,12 @@ const styles = theme => ({
     marginTop: '30px',
     marginLeft: '15%',
     marginRight: '15%',
-  }
+  },
+  FormControl: {
+    marginTop: '30px',
+    marginBottom: '15px',
+    width: '100%',
+  },
 });
 
 
@@ -49,41 +55,48 @@ class SearchExperience extends Component {
     return (
       <>
         <div className={classes.formDiv}>
-
+          <center>
+            <FormControl className={classes.FormControl}>
           <TextField
             // id="url"
             label="URL"
             // value={url}
             variant="outlined"
-          />
+          /></FormControl>
+          <FormControl className={classes.FormControl}>
           <TextField
             //   id="experience"
             label="Experience Name"
             //   value={experiencename}
             variant="outlined"
-          />
+          /></FormControl>
+          <FormControl className={classes.FormControl}>
           <TextField
             //   id="cost"
-            label="cost"
+            label="Cost"
             //   value={cost}
             variant="outlined"
-          />
+          /></FormControl></center>
         </div>
         <Button id='addExperience' variant="contained" color="primary" Selected ClassName="selBtn" className={classes.button}>
           Add Experience
       </Button>
 
+
         {/* Search form begins */}
+        <div className={classes.formDiv}>
+        <center><FormControl className={classes.FormControl}>
         <TextField
           // id="search"
-          label="Input a search field"
+          label="Find a Gift"
           // value={search}
           variant="outlined"
-        />
-        <Button id='searcBtn' variant="contained" color="primary" Selected ClassName="selBtn" className={classes.button} onClick={this.handleSubmit}>
-          Search for item
+        /></FormControl></center></div>
+        <Button id='searchBtn' variant="contained" color="primary" Selected ClassName="selBtn" className={classes.button} onClick={this.handleSubmit}>
+          Search for Gifts
       </Button>
       </>
+
     )
   }
 }
