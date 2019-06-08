@@ -68,7 +68,7 @@ function OccCard({ newOcc = [], id, name, type, date, description, handleDeleteO
           <Button id='update' size="small" backgroundGolor="#4ADDAF" onClick={() => handleStorage({ id, name, type, date, description })}>
             Update
         </Button>
-          <Button id='wishList' size="small" color="#4ADDAF" href={'/searchForm'}>
+          <Button id='wishList' size="small" color="#4ADDAF" href={'/MyWishlist2'}>
             View List
         </Button>
           <Button id='delete' size="small" color="primary" onClick={() => handleDeleteOccasion(id)}>
