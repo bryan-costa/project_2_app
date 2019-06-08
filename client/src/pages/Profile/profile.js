@@ -8,6 +8,8 @@ import Description from '../../components/OccForm/Description'
 import OccListBtn from '../../components/OccList/Button'
 import OccCard from '../../components/OccList/Card'
 import Occasion from '../../components/Utils/occasion.js'
+import EditForm from '../UpdateOccasion'
+
 
 class ProfilePage extends Component {
         state = {
@@ -62,11 +64,11 @@ class ProfilePage extends Component {
 
         handleStorage = ({ id, name, type, date, description }) => {
                 let cardData = { id, name, type, date, description }
-                localStorage.setItem('cardData', JSON.stringify(cardData))
-                window.location = '/UpdateOccasion'
+                localStorage.setItem('update', JSON.stringify(cardData))
+                this.setState({ ...this.state, currentCard: cardData, isEditing: true })
                 console.log(cardData)
-        }
-
+            }
+        
 
         handleDeleteOccasion = (id) => {
                 console.log('Here I am!')
@@ -88,6 +90,7 @@ class ProfilePage extends Component {
                                         {/* <OccList /> */}
                                         <BottomNav />
                                 </div>
+                                {this.state.isEditing ? <EditForm currentOcc={this.state.currentCard} /> : null}
                                 <OccCard
                                         newOcc={this.state.occList}
                                         handleSelectChange={this.state.type}
