@@ -5,7 +5,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar';
 import Button from '@material-ui/core/Button';
-import IronMan1 from '../../assets/images/IronMan1.png'
+import NicCage1 from '../../assets/images/NicCage1.png'
 import { Link } from 'react-router-dom';
 
 const styles = theme => ({
@@ -45,12 +45,12 @@ function AutoGridNoWrap(props) {
       <Paper className={classes.paper}>
         <Grid container wrap="nowrap" spacing={2}>
           <Grid item>
-          <Avatar alt="Remy Sharp" src={IronMan1} className={classes.bigAvatar} /> 
+          <Avatar alt="Remy Sharp" src={NicCage1} className={classes.bigAvatar} /> 
           </Grid>
           <Grid item xs>
           <div className={classes.buttonbox}>
 
-          <Button component={ Link } to='/AddToWishList' className={classes.button} variant="outlined" className={classes.button}>
+          <Button component={ Link } to='/EventList' className={classes.button} variant="outlined" className={classes.button}>
            Wishlist
           </Button > 
 
