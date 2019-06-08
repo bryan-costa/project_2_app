@@ -44,7 +44,7 @@ module.exports = app => {
     })
 
     // GET all occasions
-    // this is working > but not used in this app
+    // this is working!
     app.get('/occasions', (req, res) => {
         Occasion.findAll()
             .then(user => res.json(user))

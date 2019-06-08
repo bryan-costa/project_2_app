@@ -17,22 +17,10 @@ class UpdateOccasion extends Component {
                 occList: []
         }
 
-        // handleFormSubmit = event => {
-        //         console.log("Here I am!")
-        //         let occList = this.state.occList
-        //         let newOcc = {
-        //                 name: this.state.name,
-        //                 type: this.state.type,
-        //                 description: this.state.description,
-        //                 date: this.state.date,
-        //                 userId: 7
-        //         }
-        //         Occasion.postOne(newOcc)
-        //         this.state.occList.push(newOcc)
-        //         this.setState({ ...newOcc })
-        //         console.log(newOcc)
-        //         console.log(occList)
-        // }
+        componentDidMount = (cardData) => {
+                let editOcc = localStorage.getItem('cardData')
+                console.log(editOcc)
+        }
 
         handleChange = event => {
                 if (event.target.name) {
@@ -45,25 +33,31 @@ class UpdateOccasion extends Component {
                 })
         }
 
+        // DIDN'T GET TO THIS
+        // handleSubmitUpdate = event => {}
 
         render() {
                 const { handleUpdate } = this.state
+                const { currentOcc } = this.props
                 return (
                         <>
                                 <div style={{marginTop: '50px'}}>
                                 <h1 style={{ textAlign: 'center', color: '#707070'}}> Update Event Details</h1>
                                 </div>
                                 <UpdateName
+                                        name={currentOcc.name}
                                         handleChange={this.handleChange}
                                 />
                                 <UpdateType
-                                        type={this.state.type}
+                                        type={currentOcc.type}
                                         handleChange={this.handleChange}
                                 />
                                 <UpDate
+                                        date={currentOcc.date}
                                         handleChange={this.handleChange}
                                 />
                                 <UpdateDescription
+                                        description={currentOcc.description}
                                         handleChange={this.handleChange}
                                 />
                                 <UpdateBtn

@@ -13,8 +13,6 @@ import ViewFriends from './pages/ViewFriends'
 // import AddExperience from './components/AddToWishList/addExperience.js'
 import SearchResults from './components/SearchResults/SearchResults.js'
 import SearchExperience from './pages/SearchExperience/SearchExperience.js'
-
-
 import IronmanPage from './pages/IronmanPage'
 import IronmanWishList from './pages/IronmanWishList'
 import ContributePage from './pages/ContributePage'
@@ -36,8 +34,10 @@ class App extends Component {
           <Route path="/ViewFriends" component={ViewFriends} />
           <Route exact path="/Search" component={SearchExperience} />
           <Route exact path="/SearchResults" component={SearchResults} />
-          {/* <Route exact path="/AddExperience" component={#} /> */}
-      
+          <Route path="/IronmanPage" component={IronmanPage} />
+          <Route path="/IronmanWishList" component={IronmanWishList} />
+          <Route path="/ContributePage" component={ContributePage} />
+          <Route path="/Contributed" component={Contributed} />
           <LabelBottomNavigation />
         </div>
       </Router>

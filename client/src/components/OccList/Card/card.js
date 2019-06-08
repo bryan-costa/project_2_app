@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import './assets/css/card.css'
+import React, { Component } from 'react';
+import './card.css'
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -27,28 +27,25 @@ const useStyles = makeStyles({
 });
 
 const handleSelectImage = (type) => {
-    switch (type) {
-      case 'birthday':
-        console.log('birthday')
-        return "/images/balloons.png"
-      case 'wedding':
-        console.log('wedding')
-        return "/images/wedding.jpg"
-      case 'valentines':
-        console.log('valentines')
-        return '/images/valentines.jpg'
-      case 'baby':
-        return '/images/baby.jpg'
-      case 'because':
-        return '/images/sky.jpg'
-    }
+  switch (type) {
+    case 'birthday':
+      return "/images/balloons.png"
+    case 'wedding':
+      return "/images/wedding.jpg"
+    case 'valentines':
+      return '/images/valentines.jpg'
+    case 'baby':
+      return '/images/baby.jpg'
+    case 'because':
+      return '/images/sky.jpg'
+  }
 }
 
 
-function OccCard({ newOcc = [], handleDeleteOccasion }) {
+function OccCard({ newOcc = [], id, name, type, date, description, handleDeleteOccasion, handleStorage }) {
   const classes = useStyles();
   return (
-    newOcc.map(({ userId, id, name, type, description }) => {
+    newOcc.map(({ userId, id, name, type, date, description }) => {
       const image = handleSelectImage(type)
       return <Card className={classes.card}>
         <CardActionArea>
@@ -68,11 +65,11 @@ function OccCard({ newOcc = [], handleDeleteOccasion }) {
           </CardContent>
         </CardActionArea>
         <CardActions style={{ marginLeft: '8%', marginRight: '5%' }}>
-          <Button id='update' size="small" backgroundGolor="#4ADDAF" href={'/UpdateOccasion'}>
+          <Button id='update' size="small" backgroundGolor="#4ADDAF" onClick={() => handleStorage({ id, name, type, date, description })}>
             Update
         </Button>
           <Button id='wishList' size="small" color="#4ADDAF" href={'/searchForm'}>
-            Wish List
+            View List
         </Button>
           <Button id='delete' size="small" color="primary" onClick={() => handleDeleteOccasion(id)}>
             Delete
@@ -80,7 +77,7 @@ function OccCard({ newOcc = [], handleDeleteOccasion }) {
         </CardActions>
       </Card>
     }
-  ))
+    ))
 }
 
 
