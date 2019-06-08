@@ -7,11 +7,11 @@ import CardHeader from '@material-ui/core/CardHeader'
 import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
-import Mercedes from '../../assets/images/Mercedes.jpeg'
-import Skull from '../../assets/images/skull.jpeg'
-import Dog from '../../assets/images/Dog.jpeg'
-import Rolex from '../../assets/images/Rolex.jpeg'
-import Apron from '../../assets/images/Apron.jpeg'
+import Mercedes from '../assets/images/Mercedes.jpeg'
+import Hawaii from '../assets/images/hawaii.png'
+// import Dog from '../../assets/images/Dog.jpeg'
+// import Rolex from '../../assets/images/Rolex.jpeg'
+// import Apron from '../../assets/images/Apron.jpeg'
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { CardActions } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
@@ -46,7 +46,7 @@ const styles = theme => ({
 
 //     return (
 
-    class SearchResults extends Component {
+    class MyWishlist2 extends Component {
         state = {
           toResults: false,
         }
@@ -59,13 +59,13 @@ const styles = theme => ({
       
         render() {
           if (this.state.toResults === true) {
-            return <Redirect to='/mywishlist' />
+            return <Redirect to='/search' />
           }
           const { classes } = this.props
           return (
       <>
         <div style={{ marginTop: '30px' }}>
-          <h1 style={{ textAlign: 'center', color: '#707070' }}>Gifts</h1>
+          <h1 style={{ textAlign: 'center', color: '#707070' }}>My Wishlist</h1>
         </div>
         <div className={classes.gifts}>
 
@@ -79,7 +79,7 @@ const styles = theme => ({
                   $60,000
           </Typography>
                 <Typography variant="subtitle1" color="textSecondary">
-                  Sleek, shiny and fast car of your Dreams.
+                  Sleek, shiny and fast car of your dreams.
           </Typography>
               </CardContent>
             </div>
@@ -98,26 +98,26 @@ const styles = theme => ({
             <div className={classes.details}>
               <CardContent className={classes.content}>
                 <Typography component="h5" variant="h5">
-                  Dinosaur Skull
+                  Snorkeling in Hawaii
           </Typography>
                 <Typography variant="subtitle1" color="textSecondary">
-                  $200,000,000
+                  $599
           </Typography>
                 <Typography variant="subtitle1" color="textSecondary">
-                  Would be a great addition to your living room.
+                  A dream of mine is to swim with the fish in Hawaii!
           </Typography>
               </CardContent>
             </div>
             <CardMedia
               className={classes.cover}
-              image={Skull}
-              title="Gift"
+              image={Hawaii}
+              title="Experience"
             /><CardActions>
             <IconButton aria-label="Add to Wishlist">
           <FavoriteIcon /></IconButton></CardActions>
           </Card>
           <br />
-
+{/* 
           <Card className={classes.card}>
             <div className={classes.details}>
               <CardContent className={classes.content}>
@@ -192,7 +192,7 @@ const styles = theme => ({
             <CardActions>
             <IconButton aria-label="Add to Wishlist">
           <FavoriteIcon /></IconButton></CardActions>
-          </Card>
+          </Card> */} 
         </div >
       </>
 
@@ -200,4 +200,4 @@ const styles = theme => ({
   }
 }
 
-export default withStyles(styles)(SearchResults)
+export default withStyles(styles)(MyWishlist2)

@@ -38,7 +38,7 @@ function LabelBottomNavigation() {
     <BottomNavigation style={{marginTop: '10px'}} value={value} onChange={handleChange} className={classes.root}>
       <Link to='/CreateOccasion'>
         <BottomNavigationAction className={classes.icon} icon={<CalendarIcon />} /></Link>
-      <Link to='/EventList'>
+      <Link to='/Search'>
         <BottomNavigationAction className={classes.icon} icon={<WishIcon />} /></Link>
       <Link to='/Messages'>
         <BottomNavigationAction className={classes.icon} icon={<ChatBubbleIcon />} /></Link>

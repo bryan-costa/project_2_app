@@ -17,7 +17,8 @@ import IronmanPage from './pages/IronmanPage'
 import IronmanWishList from './pages/IronmanWishList'
 import ContributePage from './pages/ContributePage'
 import Contributed from './pages/Contributed'
-
+import MyWishlist from './pages/MyWishlist'
+import MyWishlist2 from './pages/MyWishlist2'
 
 class App extends Component {
   render() {
@@ -38,6 +39,8 @@ class App extends Component {
           <Route path="/IronmanWishList" component={IronmanWishList} />
           <Route path="/ContributePage" component={ContributePage} />
           <Route path="/Contributed" component={Contributed} />
+          <Route path="/MyWishlist" component={MyWishlist} />
+          <Route path="/MyWishlist2" component={MyWishlist2} />
           <LabelBottomNavigation />
         </div>
       </Router>
