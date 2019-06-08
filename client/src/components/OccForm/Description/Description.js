@@ -8,7 +8,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import clsx from 'clsx';
 import MenuItem from '@material-ui/core/MenuItem';
 
-
 const useStyles = makeStyles(theme => ({
   container: {
     display: 'flex',
@@ -21,57 +20,12 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-
-
 class Description extends Component {
 
   render() {
     const { classes, description, item, FormControl, InputLabel, Select, handleChange, inputLabel, values, OutlinedInput, labelWidth } = this.props
-
-
-
-
-
-    // Code for textfield -----------------------------------------
-    // function OutlinedTextFields() {
-    //   const classes = useStyles();
-    //   const [values, setValues] = React.useState({
-    //     name: 'Cat in the Hat',
-    //     age: '',
-    //     multiline: 'Controlled',
-    //     currency: 'EUR',
-    //   });
-
-    // const handleChange = name => event => {
-    //   setValues({ ...values, [name]: event.target.value });
-    // };
-    // Code for textfield  END -----------------------------------------
-
-    // Code for age input-------------------------------------------
-    // function SimpleSelect() {
-    //   const classes = useStyles();
-    //   const [values, setValues] = React.useState({
-    //     age: '',
-    //     name: 'hai',
-    //   });
-
-    // const inputLabel = React.useRef(null);
-    // const [labelWidth, setLabelWidth] = React.useState(0);
-    // React.useEffect(() => {
-    //   setLabelWidth(inputLabel.current.offsetWidth);
-    // }, []);
-
-    // function handleChange(event) {
-    //   setValues(oldValues => ({
-    //     ...oldValues,
-    //     [event.target.name]: event.target.value,
-    //   }));
-    // }
-
     return (
       <>
-
-        {/* Textfield */}
         <TextField
           id="description"
           label="Description"
@@ -79,15 +33,9 @@ class Description extends Component {
           rowsMax="4"
           value={description}
           onChange={handleChange}
-          // onChange={handleChange('multiline')}
-          // className={classes.textField}
-          // helperText=""
-          style={{width: '90%', marginTop: '30px', marginBottom: '30px', marginLeft: '15px', marginRight: '15px'}}
+          style={{ width: '90%', marginTop: '30px', marginBottom: '30px', marginLeft: '15px', marginRight: '15px' }}
           variant="outlined"
         />
-        {/* End textfield */}
-
-
       </>
     )
   }

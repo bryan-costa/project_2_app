@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-// import occForm from '../../components/CreateOccasion'
 import Type from '../../components/OccForm/Type'
 import Date from '../../components/OccForm/Date'
 import Description from '../../components/OccForm/Description'
@@ -13,9 +12,6 @@ class CreateOccasion extends Component {
                 type: '',
                 date: '',
                 description: '',
-                // need to get exact id for login button
-                // do i have to define this as a variable above?
-                // userid: localStorage.getItem('userLogin'),
                 userId: '',
                 occList: []
         }
@@ -25,7 +21,7 @@ class CreateOccasion extends Component {
                         name: '',
                         type: '',
                         date: '',
-                        description: '',  
+                        description: '',
                 })
         }
 
@@ -48,9 +44,9 @@ class CreateOccasion extends Component {
 
         handleChange = event => {
                 if (event.target.name) {
-                    return this.setState({
-                        [event.target.name]: event.target.value
-                    })    
+                        return this.setState({
+                                [event.target.name]: event.target.value
+                        })
                 }
                 this.setState({
                         [event.target.id]: event.target.value
@@ -62,8 +58,8 @@ class CreateOccasion extends Component {
                 const { handleFormSubmit } = this.state
                 return (
                         <>
-                                <div style={{marginTop: '50px'}}>
-                                <h1 style={{ textAlign: 'center', color: '#707070'}}>Create New Event</h1>
+                                <div style={{ marginTop: '50px' }}>
+                                        <h1 style={{ textAlign: 'center', color: '#707070' }}>Create New Event</h1>
                                 </div>
                                 <Name
                                         handleChange={this.handleChange}
@@ -84,8 +80,6 @@ class CreateOccasion extends Component {
                                         date={this.state.date}
                                         description={this.state.description}
                                         handleFormSubmit={this.handleFormSubmit}
-                                        // clearForm={this.clearForm}
-                                        // handleChange={this.handleChange}
                                 />
                         </>
                 )
