@@ -45,10 +45,10 @@ const handleSelectImage = (type) => {
 }
 
 
-function OccCard({ newOcc = [], handleDeleteOccasion }) {
+function OccCard({ newOcc = [], id, name, type, date, description, handleDeleteOccasion, handleStorage }) {
   const classes = useStyles();
   return (
-    newOcc.map(({ userId, id, name, type, description }) => {
+    newOcc.map(({ userId, id, name, type, date, description }) => {
       const image = handleSelectImage(type)
       return <Card className={classes.card}>
         <CardActionArea>
@@ -68,11 +68,11 @@ function OccCard({ newOcc = [], handleDeleteOccasion }) {
           </CardContent>
         </CardActionArea>
         <CardActions style={{ marginLeft: '8%', marginRight: '5%' }}>
-          <Button id='update' size="small" backgroundGolor="#4ADDAF" href={'/UpdateOccasion'}>
+          <Button id='update' size="small" backgroundGolor="#4ADDAF" onClick={() => handleStorage({id, name, type, date, description})}>
             Update
         </Button>
           <Button id='wishList' size="small" color="#4ADDAF" href={'/searchForm'}>
-            Wish List
+            View List
         </Button>
           <Button id='delete' size="small" color="primary" onClick={() => handleDeleteOccasion(id)}>
             Delete
