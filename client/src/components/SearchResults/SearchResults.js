@@ -15,7 +15,7 @@ import Apron from '../../assets/images/Apron.jpeg'
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import { CardActions } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
-
+import { Redirect } from 'react-router-dom';
 
 
 const styles = theme => ({
@@ -40,11 +40,29 @@ const styles = theme => ({
   }
 });
 
-class SearchResults extends Component {
-  render() {
-    const { classes } = this.props
+// class SearchResults extends Component {
+//   render() {
+//     const { classes } = this.props
 
-    return (
+//     return (
+
+    class SearchResults extends Component {
+        state = {
+          toResults: false,
+        }
+      
+        handleSubmit = () => {
+          this.setState(() => ({
+            toResults: true
+          }))
+        }
+      
+        render() {
+          if (this.state.toResults === true) {
+            return <Redirect to='/search' />
+          }
+          const { classes } = this.props
+          return (
       <>
         <div style={{ marginTop: '30px' }}>
           <h1 style={{ textAlign: 'center', color: '#707070' }}>Gifts</h1>
@@ -71,7 +89,7 @@ class SearchResults extends Component {
               title="Gift"
             />
             <CardActions>
-            <IconButton aria-label="Add to Wishlist">
+            <IconButton aria-label="Add to Wishlist" className={classes.button} onClick={this.handleSubmit}>
           <FavoriteIcon /></IconButton></CardActions>
           </Card>
           <br />
