@@ -12,6 +12,9 @@ import Skull from '../../assets/images/skull.jpeg'
 import Dog from '../../assets/images/Dog.jpeg'
 import Rolex from '../../assets/images/Rolex.jpeg'
 import Apron from '../../assets/images/Apron.jpeg'
+import FavoriteIcon from '@material-ui/icons/Favorite';
+import { CardActions } from '@material-ui/core';
+import IconButton from '@material-ui/core/IconButton';
 
 
 
@@ -67,6 +70,9 @@ class SearchResults extends Component {
               image={Mercedes}
               title="Gift"
             />
+            <CardActions>
+            <IconButton aria-label="Add to Wishlist">
+          <FavoriteIcon /></IconButton></CardActions>
           </Card>
           <br />
 
@@ -88,7 +94,9 @@ class SearchResults extends Component {
               className={classes.cover}
               image={Skull}
               title="Gift"
-            />
+            /><CardActions>
+            <IconButton aria-label="Add to Wishlist">
+          <FavoriteIcon /></IconButton></CardActions>
           </Card>
           <br />
 
@@ -113,6 +121,9 @@ class SearchResults extends Component {
               image={Dog}
               title="Gift"
             />
+            <CardActions>
+            <IconButton aria-label="Add to Wishlist">
+          <FavoriteIcon /></IconButton></CardActions>
           </Card>
           <br />
 
@@ -135,6 +146,9 @@ class SearchResults extends Component {
               image={Rolex}
               title="Gift"
             />
+            <CardActions>
+            <IconButton aria-label="Add to Wishlist">
+          <FavoriteIcon /></IconButton></CardActions>
           </Card>
           <br />
 
@@ -157,6 +171,9 @@ class SearchResults extends Component {
               image={Apron}
               title="Gift"
             />
+            <CardActions>
+            <IconButton aria-label="Add to Wishlist">
+          <FavoriteIcon /></IconButton></CardActions>
           </Card>
         </div >
       </>

@@ -54,6 +54,10 @@ class SearchExperience extends Component {
     const { classes } = this.props
     return (
       <>
+      <div style={{ marginTop: '30px' }}>
+          <h1 style={{ textAlign: 'center', color: '#707070' }}>Add to Wishlist</h1>
+        </div>
+
         <div className={classes.formDiv}>
           <center>
             <FormControl className={classes.FormControl}>
