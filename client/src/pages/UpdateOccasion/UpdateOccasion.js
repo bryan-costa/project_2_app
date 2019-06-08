@@ -50,8 +50,6 @@ class UpdateOccasion extends Component {
         //         console.log(occList)
         // }
 
-
-
         render() {
                 const { handleUpdate } = this.state
                 const { currentOcc } = this.props
