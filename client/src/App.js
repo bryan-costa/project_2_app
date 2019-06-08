@@ -12,7 +12,6 @@ import TopNav from './components/TopNav'
 import ViewFriends from './pages/ViewFriends'
 // import AddExperience from './components/AddToWishList/addExperience.js'
 import SearchResults from './components/SearchResults/SearchResults.js'
-<<<<<<< HEAD
 import SearchExperience from './pages/SearchExperience/SearchExperience.js'
 
 
