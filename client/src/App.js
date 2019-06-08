@@ -12,11 +12,11 @@ import TopNav from './components/TopNav'
 import ViewFriends from './pages/ViewFriends'
 // import AddExperience from './components/AddToWishList/addExperience.js'
 import SearchResults from './components/SearchResults/SearchResults.js'
+import SearchExperience from './pages/SearchExperience/SearchExperience.js'
 import IronmanPage from './pages/IronmanPage'
 import IronmanWishList from './pages/IronmanWishList'
 import ContributePage from './pages/ContributePage'
 import Contributed from './pages/Contributed'
-
 
 
 class App extends Component {
@@ -32,7 +32,8 @@ class App extends Component {
           <Route path="/Messages" component={Messages} />
           <Route path="/Profile" component={Profile} />
           <Route path="/ViewFriends" component={ViewFriends} />
-          <Route path="/search" component={SearchResults} />
+          <Route exact path="/Search" component={SearchExperience} />
+          <Route exact path="/SearchResults" component={SearchResults} />
           <Route path="/IronmanPage" component={IronmanPage} />
           <Route path="/IronmanWishList" component={IronmanWishList} />
           <Route path="/ContributePage" component={ContributePage} />

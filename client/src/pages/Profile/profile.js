@@ -21,7 +21,6 @@ class ProfilePage extends Component {
                 userId: '',
                 occList: []
         }
-
         componentWillMount() {
                 Occasion.getSome(1)
                         .then(({ data }) => {
