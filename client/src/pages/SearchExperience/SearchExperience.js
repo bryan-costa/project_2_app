@@ -82,7 +82,7 @@ class SearchExperience extends Component {
             variant="outlined"
           /></FormControl></center>
         </div>
-        <Button id='addExperience' variant="contained" color="primary" Selected ClassName="selBtn" className={classes.button}>
+        <Button id='addExperience' variant="contained" color="primary" Selected ClassName="selBtn" className={classes.button} href="/MyWishlist2">
           Add Experience
       </Button>
 
